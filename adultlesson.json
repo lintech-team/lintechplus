@@ -1,0 +1,29 @@
+    [
+	
+	        {
+            "name": "CHAPLAINCY MINISTRIES",
+            "description": "Chaplaincy Ministries of Newlife Church brings an added dimension to pastoral care—a spiritual one. In a general sense, chaplaincy may be regarded as a human service ministry that incorporates specific roles in meeting the wellbeing needs of a particular group or community.",
+            "categorie": "Church | Ministries | Department",
+            "img": "https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/gless03.jpg?alt=media&token=ee476eaa-b259-41a7-a943-d651ced7aaba"
+        },
+		        {
+            "name": "CHILDREN'S MINISTRIES",
+            "description": "Children's Ministries of Newlife Church strives to provide multiple ministries that will lead children to Jesus and disciple them in their daily walk with Him. It aims to develop the faith of children ages birth to 14.",
+            "categorie":"Children | Ministries | Department",
+            "img": "https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/adultlesson.jpg?alt=media&token=ed8e304c-3457-47d3-b005-4c4f00d9ff1d"
+        },
+		        {
+            "name": "COMMUNITY SERVICE MINISTRY",
+            "description": "Community Service Ministry service team of Newlife Church has a passion for assisting those in need. We do this providing blessing of food donations and clothing to the community around us and groups like prisoners in our Chaplaincy Ministries.",
+            "categorie":"Community | Service | Department",
+            "img": "https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/adultlesson.jpg?alt=media&token=ed8e304c-3457-47d3-b005-4c4f00d9ff1d"
+        },
+		        {
+            "name": "FAMILY LIFE MINISTRIES",
+            "description": "Family Life Ministries of Newlife Church works to develop resources, coordinate and promote training events, and provide networking opportunities for those who work on behalf of families.",
+            "categorie":"Family | Department",
+            "img": "https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/adultlesson.jpg?alt=media&token=ed8e304c-3457-47d3-b005-4c4f00d9ff1d"
+        },
+		  
+		   
+    ]

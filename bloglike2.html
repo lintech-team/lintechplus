@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: left;
+  color: #aaa;
+}
+
+.time-left {
+  float: right;
+  color: #999;
+}
+</style>
+</head>
+<body>
+
+<h2>Chat Messages</h2>
+
+<div class="container">
+  <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Facebook.png?alt=media&token=06e2f22a-54b3-4c11-831c-9516858f9403" alt="Avatar" style="width:100%;">
+  <span class="time-right">11:00</span>
+  <p>Hello. How are you today?</p>
+
+</div>
+
+<div class="container darker">
+  <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/untitled-1_30.png?alt=media&token=d564bc2f-3142-4a6a-b825-05dcad15ea7d" alt="Avatar" class="right" style="width:100%;">
+  <span class="time-left">11:01</span>
+  <p>Hey! I'm fine. Thanks for asking!</p>
+
+</div>
+
+<div class="container">
+  <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/untitled-1_30.png?alt=media&token=d564bc2f-3142-4a6a-b825-05dcad15ea7d" alt="Avatar" style="width:100%;">
+  <span class="time-right">11:02</span>
+  <p>Sweet! So, what do you wanna do today?</p>
+
+</div>
+
+<div class="container darker">
+  <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/untitled-1_30.png?alt=media&token=d564bc2f-3142-4a6a-b825-05dcad15ea7d" alt="Avatar" style="width:100%;">
+  <span class="time-right">11:05</span>
+  <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+
+</div>
+
+</body>
+</html>
+
