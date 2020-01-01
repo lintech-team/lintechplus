@@ -1,149 +1,382 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>NEWLIFE BLOG</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
 </style>
 <body class="w3-light-grey">
 
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
+  
 <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
+<div class="w3-content" style="max-width:1600px">
 
-<!-- Header -->
-<header class="w3-container w3-center w3-padding-32"> 
-  <h1><b>MY BLOG</b></h1>
-  <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
-</header>
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>NEWLIFE BLOG</b></h1>
+    <h6>Welcome to the blog of <span class="w3-tag">Newlife SDA Church</span></h6>
+  </header>
 
-<!-- Grid -->
-<div class="w3-row">
-
-<!-- Blog entries -->
-<div class="w3-col l8 s12">
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <img src="/w3images/woods.jpg" alt="Nature" style="width:100%">
-    <div class="w3-container">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/newlifechurch.png?alt=media&token=385a9311-84fa-43cc-b864-13d2e52130c2" alt="Fashion Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">Newlife</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Church Blog</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
     </div>
+  </header>
 
-    <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
-        </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
 
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-  <img src="/w3images/bridge.jpg" alt="Norway" style="width:100%">
-    <div class="w3-container">
-      <h3><b>BLOG ENTRY</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
-    </div>
-
-    <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <div class="w3-row">
-        <div class="w3-col m8 s12">
-          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+    
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>New Year 2020</h3>
+          <h5>Worship and Thanksgiving Service, <span class="w3-opacity">Jan 1, 2020</span></h5>
         </div>
-        <div class="w3-col m4 w3-hide-small">
-          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+
+        <div class="w3-justify">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/nwyear.png?alt=media&token=5487ddf1-efb7-4fb6-a702-db68669b578f" alt="Girl Hat" style="width:100%" class="w3-padding-16">
+          <p><strong>Happy New Year 2020!</strong> Come let us start the new year 2020 together in the presence of the Lord.</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
+          <p class="w3-clear"></p>
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Kibet Ronoh Josphat <span class="w3-opacity w3-medium">Jan 1, 2020, 7:32 AM</span></h4>
+                <p>Happy new year brethren</p>
+              </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-<!-- END BLOG ENTRIES -->
-</div>
+      <hr>
 
-<!-- Introduction menu -->
-<div class="w3-col l4">
-  <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-  <img src="/w3images/avatar_g.jpg" style="width:100%">
-    <div class="w3-container w3-white">
-      <h4><b>My Name</b></h4>
-      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
-    </div>
-  </div><hr>
-  
-  <!-- Posts -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>Popular Posts</h4>
-    </div>
-    <ul class="w3-ul w3-hoverable w3-white">
-      <li class="w3-padding-16">
-        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Lorem</span><br>
-        <span>Sed mattis nunc</span>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Ipsum</span><br>
-        <span>Praes tinci sed</span>
-      </li> 
-      <li class="w3-padding-16">
-        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Dorum</span><br>
-        <span>Ultricies congue</span>
-      </li>   
-      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Mingsum</span><br>
-        <span>Lorem ipsum dipsum</span>
-      </li>  
-    </ul>
-  </div>
-  <hr> 
- 
-  <!-- Labels / tags -->
-  <div class="w3-card w3-margin">
-    <div class="w3-container w3-padding">
-      <h4>Tags</h4>
-    </div>
-    <div class="w3-container w3-white">
-    <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
-    </p>
-    </div>
-  </div>
-  
-<!-- END Introduction Menu -->
-</div>
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>BIBLE STUDY</h3>
+          <h5>Elisha and Naaman, <span class="w3-opacity">Dec 31, 2019</span></h5>
+        </div>
 
-<!-- END GRID -->
-</div><br>
+        <div class="w3-justify">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/gless03.jpg?alt=media&token=ee476eaa-b259-41a7-a943-d651ced7aaba" alt="Men in Hats" style="width:100%" class="w3-padding-16">
+          <p><strong>Yes, these steps look easy. Easy enough to set aside for “later.” Easy enough to think that maybe they're not so important, or not so special. But that would be a mistake.</strong> The Bible tells the story of Naaman, the commander of the Syrian army. He contracted leprosy which was incurable and terminal. One of his slaves, an Israelite, suggested that he go to Samaria, where the prophet Elisha would be able to heal him.</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo2')"><b>READ MORE »  </b> <span class="w3-tag w3-white">2</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          
+                        
+              
+          <div id="demo2" style="display:none">
+            <div class="w3-row">
+              <hr>
+              
+               <p>Elisha told Naaman to go wash himself in the river Jordan, and to immerse himself seven times if he wanted to be healed. Naaman was insulted. That river was muddy and it was unacceptable for a high official to bath in it.</p>
+
+               <p>He was about to leave in a rage when one of his soldiers pointed out that if Elisha had asked him to do something great and difficult, he would have followed instructions without question. Yes, the instructions to dunk himself in the Jordan were simple, but what did he have to lose?</p>
+
+               <p><strong>"Yes, the instructions to dunk himself in the Jordan were simple, but what did he have to lose?"</strong></p>
+
+               <p>Naaman accepted the counsel, followed Elisha's instructions and was healed. (2 Kings 5:1-15)</p>
+
+               <p>Just like Naaman, you are free to choose your course of action. You can continue struggling with your troubles, drifting through life without meaning or purpose, and missing out on a journey that will bring you eternal life. Or, you can follow the simple steps on this page. The choice is yours.</p>
+
+
+               <p></p>
+
+               <p></p>
+
+               
+               
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+
+              
+                <h4>Amber <span class="w3-opacity w3-medium">Dec 31, 2019, 10:52 PM</span></h4>
+                <p>Amen.</p><br>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Angie <span class="w3-opacity w3-medium">Dec 31, 2019, 9:12 PM</span></h4>
+                <p>Amen!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Special Message</h3>
+          <h5>The Gift of Jesus Christ, <span class="w3-opacity">Dec ,30 2019</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/image3.jpg?alt=media&token=4395b0fb-8d40-4415-9758-489bae9a0c82" alt="Runway" style="width:100%" class="w3-padding-16">
+          
+          <p>As we come to the close of another year, I would like to invite you for a moment to consider the most amazing gift of Jesus Christ. While we do not know exactly when He was born, the important thing is that we know for certain He was born, and that He came to this Earth on a very special mission.<p>
+          
+          
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>READ MORE »  </b> <span class="w3-tag w3-white">3</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            
+               <p>Foretold by prophecy and announced by a heavenly being more than 2,000 years ago, we read in Matthew 1:21—“And she [Mary] will bring forth a Son, and you shall call His name Jesus, for He will save His people from their sins.”</p>
+               
+               <p>Oh, what a wonderful gift from heaven itself—God Himself—“Emmanuel,” came to dwell with us—to live, and teach, and heal, and die—to save us from our sins and to restore us to His likeness! </p>
+               
+               <p>Praise God He lives and is coming back soon—this time to take us to live with Him forever. Oh, what a day that will be—all made possible by the One who willingly humbled Himself, was born in a manger and died on a cross to save you and me.</p>
+               
+               <p>Let us pause for a moment as we consider the profound words of the angel, recorded in Luke, chapter 2:</p>
+               
+               <p>“Do not be afraid, for behold, I bring you good tidings of great joy which will be to all people. For there is born to you this day in the city of David a Savior, who is Christ the Lord. And this will be the sign to you: You will find a Babe wrapped in swaddling cloths, lying in a manger.”</p>
+               
+               <p>“And suddenly there was with the angel a multitude of the heavenly host praising God and saying: ‘Glory to God in the highest, And on earth peace, goodwill toward men’” (vss. 10-14)</p>
+               
+               <p>May the joy of His birth, the peace of His presence, and the hope of His soon return fill your heart with the Gift of His immeasurable love.</p>
+               
+               <p>Maranatha!</p>
+               
+        
+
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Jane <span class="w3-opacity w3-medium">Dec ,30 2019, 7:22 PM</span></h4>
+                <p>That was a powerful message. Be Blessed.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>John <span class="w3-opacity w3-medium">Dec ,30 2019, 10:32 PM</span></h4>
+                <p>Keep up the GREAT work! I am Blessed.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Anja <span class="w3-opacity w3-medium">Dec ,30 2019, 9:12 PM</span></h4>
+                <p>Wonderful message.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- END BLOG ENTRIES -->
+    </div>
+
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>Newlife SDA Church<h4> 
+          <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Posts -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Popular Posts</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Newlife</span>
+            <br>
+            <span>Happy New Year</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Newlife</span>
+            <br>
+            <span>Happy New Year</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Newlife</span>
+            <br>
+            <span>Happy New Year</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+            <span class="w3-large">Newlife</span>
+            <br>
+            <span>Happy New Year</span>
+          </li>
+        </ul>
+      </div>
+      <hr>
+
+      <!-- Advertising -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Advertise</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale">
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Tags -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Tags</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>
+            <span class="w3-tag w3-black w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+          </p>
+        </div>
+      </div>
+      <hr>
+
+      <!-- Inspiration -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Inspiration</h4>
+        </div>
+        <div class="w3-row-padding w3-white">
+          <div class="w3-col s6">
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
+          </div>
+          <div class="w3-col s6">
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale"></p>
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
+         </div>
+        </div>
+      </div>
+      <hr>
+
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Follow Us</h4>
+        </div>
+        <div class="w3-container w3-xlarge w3-padding">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+      </div>
+      <hr>
+      
+      <!-- Subscribe -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Subscribe</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>Enter your e-mail below and get notified on the latest blog posts.</p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button></p>
+        </div>
+      </div>
+
+    <!-- END About/Intro Menu -->
+    </div>
+
+  <!-- END GRID -->
+  </div>
 
 <!-- END w3-content -->
 </div>
 
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
 <!-- Footer -->
-<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
+}
+</script>
+
 </body>
 </html>
-
