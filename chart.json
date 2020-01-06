@@ -11,11 +11,11 @@
   },
   "pie_statistics": {
     "assigned": 2000,
-    "opened": 754,000,
+    "opened": 754,
     "in-progress": 80,
     "completed": 950,
-    "done": 486,705,
-    "rejected": 173,671,
+    "done": 486,
+    "rejected": 173,
     "expired": 3
   },
  
