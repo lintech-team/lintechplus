@@ -1,306 +1,443 @@
-<!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-</style>
-<body class="w3-light-grey">
-
-<!-- Top container -->
-<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-  <span class="w3-bar-item w3-right">Logo</span>
-</div>
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container w3-row">
-    <div class="w3-col s4">
-      <img src="/w3images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
-    </div>
-    <div class="w3-col s8 w3-bar">
-      <span>Welcome, <strong>Mike</strong></span><br>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
-    </div>
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>Dashboard</h5>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>  Views</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  Traffic</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>  Geo</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>  Orders</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i>  General</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-history fa-fw"></i>  History</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
-  </div>
-</nav>
+<head>
+  <style type="text/css">
 
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+}
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
 
-  <!-- Header -->
-  <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
-  </header>
+.cf:after {
+    clear: both;
+}
 
-  <div class="w3-row-padding w3-margin-bottom">
-    <div class="w3-quarter">
-      <div class="w3-container w3-red w3-padding-16">
-        <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>52</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Messages</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-blue w3-padding-16">
-        <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>99</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Views</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-teal w3-padding-16">
-        <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>23</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Shares</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-orange w3-text-white w3-padding-16">
-        <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>50</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Users</h4>
-      </div>
-    </div>
-  </div>
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
 
-  <div class="w3-panel">
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-third">
-        <h5>Regions</h5>
-        <img src="/w3images/region.jpg" style="width:100%" alt="Google Regional Map">
-      </div>
-      <div class="w3-twothird">
-        <h5>Feeds</h5>
-        <table class="w3-table w3-striped w3-white">
-          <tr>
-            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-            <td>New record, over 90 views.</td>
-            <td><i>10 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-            <td>Database error.</td>
-            <td><i>15 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
-            <td>New record, over 40 users.</td>
-            <td><i>17 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-            <td>New comments.</td>
-            <td><i>25 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-            <td>Check transactions.</td>
-            <td><i>28 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-            <td>CPU overload.</td>
-            <td><i>35 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-            <td>New shares.</td>
-            <td><i>39 mins</i></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>General Stats</h5>
-    <p>New Visitors</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
-    </div>
+/* Generic styling */
 
-    <p>New Users</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
-    </div>
+body{
+	background: #F5EEC9;	
+}
 
-    <p>Bounce Rate</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
-    </div>
-  </div>
-  <hr>
+.content{
+	width: 100%;
+	max-width: 1142px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
 
-  <div class="w3-container">
-    <h5>Countries</h5>
-    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-      <tr>
-        <td>United States</td>
-        <td>65%</td>
-      </tr>
-      <tr>
-        <td>UK</td>
-        <td>15.7%</td>
-      </tr>
-      <tr>
-        <td>Russia</td>
-        <td>5.6%</td>
-      </tr>
-      <tr>
-        <td>Spain</td>
-        <td>2.1%</td>
-      </tr>
-      <tr>
-        <td>India</td>
-        <td>1.9%</td>
-      </tr>
-      <tr>
-        <td>France</td>
-        <td>1.5%</td>
-      </tr>
-    </table><br>
-    <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button>
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>Recent Users</h5>
-    <ul class="w3-ul w3-card-4 w3-white">
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Mike</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Jill</span><br>
-      </li>
-      <li class="w3-padding-16">
-        <img src="/w3images/avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
-        <span class="w3-xlarge">Jane</span><br>
-      </li>
-    </ul>
-  </div>
-  <hr>
+a:focus{
+	outline: 2px dashed #f7f7f7;
+}
 
-  <div class="w3-container">
-    <h5>Recent Comments</h5>
-    <div class="w3-row">
-      <div class="w3-col m2 text-center">
-        <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
-      </div>
-      <div class="w3-col m10 w3-container">
-        <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
-        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-      </div>
-    </div>
+@media screen and (max-width: 767px){
+	.content{
+		padding: 0 20px;
+	}	
+}
 
-    <div class="w3-row">
-      <div class="w3-col m2 text-center">
-        <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
-      </div>
-      <div class="w3-col m10 w3-container">
-        <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
-        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="w3-container w3-dark-grey w3-padding-32">
-    <div class="w3-row">
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-green">Demographic</h5>
-        <p>Language</p>
-        <p>Country</p>
-        <p>City</p>
-      </div>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-red">System</h5>
-        <p>Browser</p>
-        <p>OS</p>
-        <p>More</p>
-      </div>
-      <div class="w3-container w3-third">
-        <h5 class="w3-bottombar w3-border-orange">Target</h5>
-        <p>Users</p>
-        <p>Active</p>
-        <p>Geo</p>
-        <p>Interests</p>
-      </div>
-    </div>
-  </div>
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;		
+}
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-16 w3-light-grey">
-    <h4>FOOTER</h4>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  </footer>
+ul a{
+	display: block;
+	background: #ccc;
+	border: 4px solid #fff;
+	text-align: center;
+	overflow: hidden;
+	font-size: .7em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #333;
+	height: 70px;
+	margin-bottom: -26px;
+	box-shadow: 4px 4px 9px -4px rgba(0,0,0,0.4);
+	-webkit-transition: all linear .1s;
+	-moz-transition: all linear .1s;
+	transition: all linear .1s;
+}
 
-  <!-- End page content -->
-</div>
+@media print {
+    ul a{
+        border: 4px solid #000;
+    }
+}
 
-<script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
+@media screen and (max-width: 767px){
+	ul a{
+		font-size: 1em;
+	}
+}
 
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
 
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
+ul a span{
+	top: 50%;
+	margin-top: -0.7em;
+	display: block;
+}
+
+/*
+ 
+ */
+
+.administration > li > a{
+	margin-bottom: 25px;
+}
+
+.director > li > a{
+	width: 50%;
+	margin: 0 auto 0px auto;
+}
+
+.subdirector:after{
+	content: "";
+	display: block;
+	width: 0;
+	height: 130px;
+	background: red;
+	border-left: 4px solid #fff;
+	left: 45.45%;
+	position: relative;
+}
+
+@media print {
+    .subdirector:after{
+        border-left: 4px solid #000;
+    }
+}
+
+.subdirector,
+.departments{
+	position: absolute;
+	width: 100%;
+}
+
+.subdirector > li:first-child,
+.departments > li:first-child{	
+	width: 18.59894921190893%;
+	height: 64px;
+	margin: 0 auto 92px auto;		
+	padding-top: 25px;
+	border-bottom: 4px solid white;
+	z-index: 1;	
+}
+
+@media print {
+    .subdirector > li:first-child,
+    .departments > li:first-child{
+        border-bottom: 4px solid #000;
+    }
+}
+
+.subdirector > li:first-child{
+	float: right;
+	right: 27.2%;
+	border-left: 4px solid white;
+}
+
+@media print {
+    .subdirector > li:first-child{
+	    border-left: 4px solid black;
+    }   
+}
+
+.departments > li:first-child{	
+	float: left;
+	left: 27.2%;
+	border-right: 4px solid white;	
+}
+
+@media print {
+    .departments > li:first-child{
+        border-right: 4px solid black;	
+    }
+}
+
+.subdirector > li:first-child a,
+.departments > li:first-child a{
+	width: 100%;
+}
+
+.subdirector > li:first-child a{	
+	left: 25px;
+}
+
+@media screen and (max-width: 767px){
+	.subdirector > li:first-child,
+	.departments > li:first-child{
+		width: 40%;	
+	}
+
+	.subdirector > li:first-child{
+		right: 10%;
+		margin-right: 2px;
+	}
+
+	.subdirector:after{
+		left: 49.8%;
+	}
+
+	.departments > li:first-child{
+		left: 10%;
+		margin-left: 2px;
+	}
+}
+
+
+.departments > li:first-child a{
+	right: 25px;
+}
+
+.department:first-child,
+.departments li:nth-child(2){
+	margin-left: 0;
+	clear: left;	
+}
+
+.departments:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 81.1%;
+	height: 22px;	
+	border-top: 4px solid #fff;
+	border-right: 4px solid #fff;
+	border-left: 4px solid #fff;
+	margin: 0 auto;
+	top: 130px;
+	left: 9.1%
+}
+
+@media print {
+    .departments:after{
+        border-top: 4px solid #000;
+        border-right: 4px solid #000;
+        border-left: 4px solid #000;
+    }
+}
+
+@media screen and (max-width: 767px){
+	.departments:after{
+		border-right: none;
+		left: 0;
+		width: 49.8%;
+	}  
+}
+
+@media screen and (min-width: 768px){
+	.department:first-child:before,
+   .department:last-child:before{
+    border:none;
   }
 }
 
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
+.department:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 22px;
+	border-left: 4px solid white;
+	z-index: 1;
+	top: -22px;
+	left: 50%;
+	margin-left: -4px;
 }
-</script>
 
+@media print {
+    .department:before{
+        border-left: 4px solid black;
+    }
+}
+
+.department{
+	border-left: 4px solid #fff;
+	width: 18.59894921190893%;
+	float: left;
+	margin-left: 1.751313485113835%;
+	margin-bottom: 60px;
+}
+
+@media print {
+    .department{
+	    border-left: 4px solid #000;
+    }
+}
+
+.lt-ie8 .department{
+	width: 18.25%;
+}
+
+@media screen and (max-width: 767px){
+	.department{
+		float: none;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.department:before{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 60px;
+		border-left: 4px solid white;
+		z-index: 1;
+		top: -60px;
+		left: 0%;
+		margin-left: -4px;
+	}
+
+	.department:nth-child(2):before{
+		display: none;
+	}
+}
+
+.department > a{
+	margin: 0 0 -26px -4px;
+	z-index: 1;
+}
+
+.department > a:hover{	
+	height: 80px;
+}
+
+.department > ul{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.department li{	
+	padding-left: 25px;
+	border-bottom: 4px solid #fff;
+	height: 80px;	
+}
+
+@media print {
+    .department li{
+        border-bottom: 4px solid #000;
+    }
+}
+
+.department li a{
+	background: #fff;
+	top: 48px;	
+	position: absolute;
+	z-index: 1;
+	width: 90%;
+	height: 60px;
+	vertical-align: middle;
+	right: -1px;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background-image: -moz-linear-gradient(-45deg,  rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%) !important;
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(0,0,0,0.25)), color-stop(100%,rgba(0,0,0,0)))!important;
+	background-image: -webkit-linear-gradient(-45deg,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%)!important;
+	background-image: -o-linear-gradient(-45deg,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%)!important;
+	background-image: -ms-linear-gradient(-45deg,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%)!important;
+	background-image: linear-gradient(135deg,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%)!important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', endColorstr='#00000000',GradientType=1 );
+}
+
+.department li a:hover{
+	box-shadow: 8px 8px 9px -4px rgba(0,0,0,0.1);
+	height: 80px;
+	width: 95%;
+	top: 39px;
+	background-image: none!important;
+}
+
+/* Department/ section colors */
+.department.dep-a a{ background: #FFD600; }
+.department.dep-b a{ background: #AAD4E7; }
+.department.dep-c a{ background: #FDB0FD; }
+.department.dep-d a{ background: #A3A2A2; }
+.department.dep-e a{ background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <div class="content">
+  <h1>Responsive Organization Chart</h1>
+  <figure class="org-chart cf">
+    <ul class="administration">
+      <li>					
+        <ul class="director">
+          <li>
+            <a href="#"><span>Director</span></a>
+            <ul class="subdirector">
+              <li><a href="#"><span>Assistante Director</span></a></li>
+            </ul>
+            <ul class="departments cf">								
+              <li><a href="#"><span>Administration</span></a></li>
+              
+              <li class="department dep-a">
+                <a href="#"><span>Department A</span></a>
+                <ul class="sections">
+                  <li class="section"><a href="#"><span>Section A1</span></a></li>
+                  <li class="section"><a href="#"><span>Section A2</span></a></li>
+                  <li class="section"><a href="#"><span>Section A3</span></a></li>
+                  <li class="section"><a href="#"><span>Section A4</span></a></li>
+                  <li class="section"><a href="#"><span>Section A5</span></a></li>
+                </ul>
+              </li>
+              <li class="department dep-b">
+                <a href="#"><span>Department B</span></a>
+                <ul class="sections">
+                  <li class="section"><a href="#"><span>Section B1</span></a></li>
+                  <li class="section"><a href="#"><span>Section B2</span></a></li>
+                  <li class="section"><a href="#"><span>Section B3</span></a></li>
+                  <li class="section"><a href="#"><span>Section B4</span></a></li>
+                </ul>
+              </li>
+              <li class="department dep-c">
+                <a href="#"><span>Department C</span></a>
+                <ul class="sections">
+                  <li class="section"><a href="#"><span>Section C1</span></a></li>
+                  <li class="section"><a href="#"><span>Section C2</span></a></li>
+                  <li class="section"><a href="#"><span>Section C3</span></a></li>
+                  <li class="section"><a href="#"><span>Section C4</span></a></li>
+                </ul>
+              </li>
+              <li class="department dep-d">
+                <a href="#"><span>Department D</span></a>
+                <ul class="sections">
+                  <li class="section"><a href="#"><span>Section D1</span></a></li>
+                  <li class="section"><a href="#"><span>Section D2</span></a></li>
+                  <li class="section"><a href="#"><span>Section D3</span></a></li>
+                  <li class="section"><a href="#"><span>Section D4</span></a></li>
+                  <li class="section"><a href="#"><span>Section D5</span></a></li>
+                  <li class="section"><a href="#"><span>Section D6</span></a></li>
+                </ul>
+              </li>
+              <li class="department dep-e">
+                <a href="#"><span>Department E</span></a>
+                <ul class="sections">
+                  <li class="section"><a href="#"><span>Section E1</span></a></li>
+                  <li class="section"><a href="#"><span>Section E2</span></a></li>
+                  <li class="section"><a href="#"><span>Section E3</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>	
+      </li>
+    </ul>			
+  </figure>
+</div>
 </body>
-</html>
