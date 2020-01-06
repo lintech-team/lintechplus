@@ -10,13 +10,13 @@
     "total": 6095
   },
   "pie_statistics": {
-    "assigned": 2020,
-    "opened": 2021,
-    "in-progress": 2022,
-    "completed": 2023,
-    "done": 2024,
-    "rejected": 2025,
-    "expired": 2026
+    "assigned": 2000,
+    "opened": 1500,
+    "in-progress": 80,
+    "completed": 950,
+    "done": 2000,
+    "rejected": 57,
+    "expired": 3
   },
   
   "bar_months":[
