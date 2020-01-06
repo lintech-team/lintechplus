@@ -3,20 +3,20 @@
   "success": true,
   
   "counter": {
-    "pending": 100,
-    "rejected": 200,
-    "completed": 300,
-    "expired": 400,
-    "total": 3200
+    "pending": 6091,
+    "rejected": 6092,
+    "completed": 6093,
+    "expired": 6094,
+    "total": 6095
   },
   "pie_statistics": {
-    "assigned": 120,
-    "opened": 212,
-    "in-progress": 100,
-    "completed": 320,
-    "done": 433,
-    "rejected": 111,
-    "expired": 332
+    "assigned": 2020,
+    "opened": 2021,
+    "in-progress": 2022,
+    "completed": 2023,
+    "done": 2024,
+    "rejected": 2025,
+    "expired": 2026
   },
   
   "bar_months":[
@@ -26,22 +26,22 @@
 ],
   
   "bar_pending":[
-    100,
-    200,
-    300
+    1000,
+    500,
+    50
   ],
   
    "bar_rejected":[
-    140,
-    220,
-    340
+    652,
+    102,
+    800
   ],
   
   
    "bar_completed":[
-    170,
-    290,
-    310
+    456,
+    852,
+    30
   ]
   
 }
