@@ -1,23 +1,62 @@
-{
-   "person": [
-       {
-           "firstName": "Clark",
-           "lastName": "Kent",
-           "job": "Reporter",
-           "roll": 20
-       },
-       {
-           "firstName": "Bruce",
-           "lastName": "Wayne",
-           "job": "Playboy",
-           "roll": 30
-       },
-       {
-           "firstName": "Peter",
-           "lastName": "Parker",
-           "job": "Photographer",
-           "roll": 40
-       }
-   ]
-}
-
+[
+    {
+        "id": "1",
+        "firstname": "Todd",
+        "lastname": "Miller",
+        "jobprofile": "Project Manager"
+    },
+    {
+        "id": "2",
+        "firstname": "Bradley",
+        "lastname": "Matthews",
+        "jobprofile": "Senior Developer"
+    },
+    {
+        "id": "3",
+        "firstname": "Harley",
+        "lastname": "Gibson",
+        "jobprofile": "Lead Developer"
+    },
+    {
+        "id": "4",
+        "firstname": "Gary",
+        "lastname": "Thompson",
+        "jobprofile": "Lead Developer"
+    },
+    {
+        "id": "5",
+        "firstname": "Corey",
+        "lastname": "Williamson",
+        "jobprofile": "UI\/UX Developer"
+    },
+    {
+        "id": "6",
+        "firstname": "Samuel",
+        "lastname": "Jones",
+        "jobprofile": "Front-End Developer"
+    },
+    {
+        "id": "7",
+        "firstname": "Michael",
+        "lastname": "Read",
+        "jobprofile": "Backend Developer"
+    },
+    {
+        "id": "8",
+        "firstname": "Robert",
+        "lastname": "Phillips",
+        "jobprofile": "Android Developer"
+    },
+    {
+        "id": "9",
+        "firstname": "Albert",
+        "lastname": "Stewart",
+        "jobprofile": "Web Developer"
+    },
+    {
+        "id": "10",
+        "firstname": "Wayne",
+        "lastname": "Diaz",
+        "jobprofile": "Junior Developer"
+    }
+]
