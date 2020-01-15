@@ -1,62 +1,8 @@
 [
     {
         "id": "1",
-        "firstname": "Todd",
-        "lastname": "Miller",
-        "jobprofile": "Project Manager"
-    },
-    {
-        "id": "2",
-        "firstname": "Bradley",
-        "lastname": "Matthews",
-        "jobprofile": "Senior Developer"
-    },
-    {
-        "id": "3",
-        "firstname": "Harley",
-        "lastname": "Gibson",
-        "jobprofile": "Lead Developer"
-    },
-    {
-        "id": "4",
-        "firstname": "Gary",
-        "lastname": "Thompson",
-        "jobprofile": "Lead Developer"
-    },
-    {
-        "id": "5",
-        "firstname": "Corey",
-        "lastname": "Williamson",
-        "jobprofile": "UI\/UX Developer"
-    },
-    {
-        "id": "6",
-        "firstname": "Samuel",
-        "lastname": "Jones",
-        "jobprofile": "Front-End Developer"
-    },
-    {
-        "id": "7",
-        "firstname": "Michael",
-        "lastname": "Read",
-        "jobprofile": "Backend Developer"
-    },
-    {
-        "id": "8",
-        "firstname": "Robert",
-        "lastname": "Phillips",
-        "jobprofile": "Android Developer"
-    },
-    {
-        "id": "9",
-        "firstname": "Albert",
-        "lastname": "Stewart",
-        "jobprofile": "Web Developer"
-    },
-    {
-        "id": "10",
-        "firstname": "Wayne",
-        "lastname": "Diaz",
-        "jobprofile": "Junior Developer"
+        "firstname": "Adventist Men",
+        "lastname": "Organization",
+        "jobprofile": "Adventist Men's Ministry of Newlife Church serves to meet the spiritual needs of the men in the church through prayer and fellowship. Newlife AMO helps men realize their Spiritual Gifts through Bible study and challenge them to understand the need for being great spiritual role models and witnesses for Christ"
     }
 ]
