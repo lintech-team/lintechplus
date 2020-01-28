@@ -2,21 +2,21 @@
     {
         "id": "1",
         "firstname": "UPDATE",
-        "jobprofile": "New Update available on google play store."
-        "lastname": "28-JAN-2020",
+        "jobprofile": "New Update available on google play store.",
+        "lastname": "28-JAN-2020"
 
 	},
     {
         "id": "2",
         "firstname": "Insuarance Cover",
-        "jobprofile": "Apply today to get your new smartphone covered by our Insuarance"
-        "lastname": "05-JAN-2020",
+        "jobprofile": "Apply today to get your new smartphone covered by our Insuarance",
+        "lastname": "05-JAN-2020"
 
 	},{
         "id": "2",
         "firstname": "Donation",
-        "jobprofile": "Happy with what you are seeing? well, you can support us using the support page"
-        "lastname": "01-JAN-2020",
+        "jobprofile": "Happy with what you are seeing? well, you can support us using the support page",
+        "lastname": "01-JAN-2020"
 
 	}
 ]
