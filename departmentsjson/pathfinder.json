@@ -1,0 +1,14 @@
+[ 
+    {
+        "id": "1",
+        "firstname": "PATHFINDER",
+        "lastname": "CLUB",
+        "jobprofile": "Pathfinders are a worldwide organization of young people sponsored by the Seventh-day Adventist Church, though young people of any religious persuasion, or none at all, are welcome and encouraged to join the organization."
+    },
+    {
+        "id": "2",
+        "firstname": "",
+        "lastname": "",
+        "jobprofile": ""
+    }
+]

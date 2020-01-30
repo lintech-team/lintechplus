@@ -1,0 +1,14 @@
+[ 
+    {
+        "id": "1",
+        "firstname": "Adventist Men",
+        "lastname": "Organization",
+        "jobprofile": "Chaplaincy Ministries of Newlife Church brings an added dimension to pastoral care—a spiritual one. In a general sense, chaplaincy may be regarded as a human service ministry that incorporates specific roles in meeting the wellbeing needs of a particular group or community."
+    },
+    {
+        "id": "2",
+        "firstname": "",
+        "lastname": "",
+        "jobprofile": "Adventist Chaplaincy Ministries (ACM) is the denomination’s liaison office with organizations using professional chaplains in church-related or public institutions. ACM supports qualified Adventist clergy who are called to campus, community, corrections, healthcare, military or work-place chaplaincy ministries. The National Service Organization chapter of ACM provides pastoral care and religious resources to enhance the spiritual well-being of Seventh-day Adventists in military-related service."
+    }
+]
