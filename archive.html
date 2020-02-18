@@ -1,1 +1,629 @@
-loading...
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/mattgreenberg/pen/EKQoEy?depth=everything&order=popularity&page=71&q=Overlay&show_forks=false" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'><link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,700,700italic'>
+<style class="cp-pen-styles">html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html, body {
+  font-family: Roboto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #282b34;
+}
+html .card, body .card {
+  height: 38em;
+  position: relative;
+  width: 25em;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 1em;
+  background: #292c35;
+  box-shadow: 0px 0px 20px 5px #20222a;
+  font-family: Roboto;
+  overflow: hidden;
+}
+html .card .apple-stuff, body .card .apple-stuff {
+  padding: 2% 2%;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px 10px 0px 0px;
+}
+html .card .apple-stuff .date, body .card .apple-stuff .date {
+  display: inline;
+  position: absolute;
+  font-family: Roboto;
+  left: 50%;
+  font-weight: 300;
+  font-size: 0.8em;
+  margin-top: -0.8em;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+html .card .apple-stuff .battery, body .card .apple-stuff .battery {
+  margin-left: 21em;
+}
+html .card .picture-section h3, body .card .picture-section h3 {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  margin-top: 0.3em;
+  font-weight: 300;
+}
+html .card .picture-section .band, body .card .picture-section .band {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/377560/trey.png) no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  height: 20em;
+  -webkit-filter: brightness(40%) opacity(60%) blur(1px);
+  filter: brightness(40%) opacity(60%) blur(1px);
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+html .card .picture-section .band:hover, body .card .picture-section .band:hover {
+  -webkit-filter: brightness(30%) opacity(65%) blur(1px);
+  filter: brightness(30%) opacity(65%) blur(1px);
+}
+html .card .picture-section .band .overlay, body .card .picture-section .band .overlay {
+  background-color: rgba(255, 255, 255, 0.4);
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.4) 70%, #292c35);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 70%, #292c35);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 48%;
+  width: 100%;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+}
+html .card .picture-section .band .overlay.active, body .card .picture-section .band .overlay.active {
+  opacity: 1;
+  -webkit-transition: 1.3s;
+  -moz-transition: 1.3s;
+  transition: 1.3s;
+}
+html .card .slider, body .card .slider {
+  position: relative;
+  z-index: 100;
+  background: #8e8f93;
+  border: none;
+  border-radius: 0px;
+  height: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+html .card .slider .ui-slider-range, body .card .slider .ui-slider-range {
+  background: #769778;
+}
+html .card .slider .ui-slider-handle, body .card .slider .ui-slider-handle {
+  width: 3px;
+  margin-left: 0px;
+  height: 15px;
+  top: 1px;
+}
+html .card .slider .ui-slider-handle:focus, body .card .slider .ui-slider-handle:focus {
+  outline: none;
+  background: white;
+}
+html .card .time, body .card .time {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 2%;
+}
+html .card .time .start, body .card .time .start {
+  display: inline-block;
+}
+html .card .time .end, body .card .time .end {
+  display: inline-block;
+  margin-left: 25.5em;
+}
+html .card .song-title, body .card .song-title {
+  text-align: center;
+  margin-top: -0.4em;
+}
+html .card .song-title .artist, body .card .song-title .artist {
+  color: rgba(255, 255, 255, 0.8);
+}
+html .card .song-title .song, body .card .song-title .song {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  font-size: 0.9em;
+  margin-top: 0.1em;
+}
+html .card .playlist-controls, body .card .playlist-controls {
+  text-align: center;
+  margin-top: 1.8em;
+  -webkit-transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+  -moz-transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+  transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+}
+html .card .playlist-controls.active, body .card .playlist-controls.active {
+  margin-top: -13em;
+  -webkit-transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+  -moz-transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+  transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+}
+html .card .playlist-controls.active .circle, body .card .playlist-controls.active .circle {
+  top: 13.5em;
+  background: rgba(255, 255, 255, 0.03);
+}
+html .card .playlist-controls .circle, body .card .playlist-controls .circle {
+  position: absolute;
+  height: 4em;
+  width: 4em;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  margin-left: 10.4em;
+  top: 28.5em;
+  -webkit-transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+  -moz-transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+  transition: 0.7s cubic-bezier(0.87, -0.41, 0.19, 1.1);
+}
+html .card .playlist-controls #backward, body .card .playlist-controls #backward {
+  margin-left: 2em;
+  margin-right: 2em;
+  color: #8e8f93;
+  font-size: 1.5em;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+html .card .playlist-controls #backward:hover, body .card .playlist-controls #backward:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+html .card .playlist-controls .play-song, body .card .playlist-controls .play-song {
+  display: inline-block;
+}
+html .card .playlist-controls .play-song #play, body .card .playlist-controls .play-song #play {
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 5;
+  left: 0px;
+  top: 2px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+html .card .playlist-controls .play-song #play:hover, body .card .playlist-controls .play-song #play:hover {
+  color: #827cc2;
+}
+html .card .playlist-controls #forward, body .card .playlist-controls #forward {
+  margin-left: 2em;
+  margin-right: 2em;
+  color: #8e8f93;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+html .card .playlist-controls #forward:hover, body .card .playlist-controls #forward:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+html .card .song-list, body .card .song-list {
+  width: 100%;
+  position: absolute;
+  height: 20em;
+  bottom: -53%;
+  z-index: 100;
+  background: #292c35;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+}
+html .card .song-list.active, body .card .song-list.active {
+  bottom: 0%;
+}
+html .card .song-list .line, body .card .song-list .line {
+  width: 95%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 3.4em;
+}
+html .card .song-list .line.two, body .card .song-list .line.two {
+  margin-top: 6.4em;
+}
+html .card .song-list .line.three, body .card .song-list .line.three {
+  margin-top: 9.2em;
+}
+html .card .song-list .line.four, body .card .song-list .line.four {
+  margin-top: 12em;
+}
+html .card .song-list table, body .card .song-list table {
+  color: rgba(255, 255, 255, 0.55);
+  padding: 0 2%;
+  position: relative;
+}
+html .card .song-list table .line, body .card .song-list table .line {
+  width: 80%;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  z-index: 10000;
+}
+html .card .song-list table tr, body .card .song-list table tr {
+  cursor: pointer;
+}
+html .card .song-list table tr:hover td, body .card .song-list table tr:hover td {
+  color: #827cc2;
+}
+html .card .song-list table tr td, body .card .song-list table tr td {
+  padding-top: 1.5em;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+html .card .song-list table tr .num, body .card .song-list table tr .num {
+  font-size: 0.7em;
+  position: relative;
+  top: 5px;
+  font-weight: 300;
+}
+html .card .song-list table tr .title, body .card .song-list table tr .title {
+  padding-left: 3em;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  width: 300px;
+  font-weight: 300;
+}
+html .card .song-list table tr .length, body .card .song-list table tr .length {
+  padding-left: 4em;
+  font-size: 0.7em;
+  position: relative;
+  top: 5px;
+  font-weight: 300;
+}
+html .card .volume i, body .card .volume i {
+  display: inline-block;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: -0.5em;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+html .card .volume i:hover, body .card .volume i:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+html .card .volume i#volume-off, body .card .volume i#volume-off {
+  margin-left: 2.5em;
+}
+html .card .volume i#volume-up, body .card .volume i#volume-up {
+  margin-left: 21.7em;
+}
+html .card .volume .slider-volume, body .card .volume .slider-volume {
+  position: relative;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 0px;
+  height: 3px;
+  width: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-top: 2.7em;
+  cursor: pointer;
+}
+html .card .volume .slider-volume .ui-slider-range, body .card .volume .slider-volume .ui-slider-range {
+  background: #827cc2;
+}
+html .card .volume .slider-volume .ui-slider-handle, body .card .volume .slider-volume .ui-slider-handle {
+  display: none;
+}
+html .card .volume .slider-volume .ui-slider-handle:focus, body .card .volume .slider-volume .ui-slider-handle:focus {
+  outline: none;
+  background: white;
+}
+html .card .slide-up, body .card .slide-up {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+}
+html .card .slide-up i, body .card .slide-up i {
+  margin-left: 50%;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+html .card .slide-up i:hover, body .card .slide-up i:hover {
+  color: #827cc2;
+}
+
+.social {
+  text-align: center;
+  margin-top: 3em;
+}
+.social i {
+  color: rgba(255, 255, 255, 0.8);
+  margin-left: 1em;
+  margin-right: 1em;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+.social i:hover {
+  color: #8e8f93;
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+</style></head><body>
+
+<div class="card">
+  <div class="apple-stuff"><i class="fa fa-wifi">
+      <div class="date">12:00 AM</div></i><i class="fa fa-battery-3 battery"></i></div>
+  <div class="picture-section">
+    <h3>Now Playing</h3>
+    <div class="band">
+      <div class="overlay"></div>
+    </div>
+  </div>
+  <div class="slider"></div>
+  <div class="time"></div>
+  <div class="song-title">
+    <div class="artist">Phish</div>
+    <div class="song">Suzy Greenberg</div>
+  </div>
+  <div class="playlist-controls">
+    <div class="circle"></div>
+    <div class="play-song"><i class="fa fa-play" id="play"></i></div>
+  </div>
+  <div class="song-list">
+    <div class="line"></div>
+    <div class="line two"></div>
+    <div class="line three"></div>
+    <div class="line four"></div>
+    <table>
+      <tr id="billy" data-title="billyBreathes">
+        <td class="num">1</td>
+        <td class="title">Billy Breathes</td>
+        <td class="length">3:00</td>
+      </tr>
+      <tr id="hood" data-title="harryHood">
+        <td class="num">2</td>
+        <td class="title">Harry Hood</td>
+        <td class="length">2:54</td>
+      </tr>
+      <tr id="suzy" data-title="suzyGreenberg">
+        <td class="num">3</td>
+        <td class="title">Suzy Greenberg</td>
+        <td class="length">2:54</td>
+      </tr>
+      <tr id="divided" data-title="themeFromTheBottom">
+        <td class="num">4</td>
+        <td class="title">Theme From The Bottom</td>
+        <td class="length">2:54</td>
+      </tr>
+    </table>
+    <div class="social"><a href="https://twitter.com/McGreenBeats" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://www.linkedin.com/in/mattcgreenberg" target="_blank"><i class="fa fa-linkedin"></i></a><a href="https://codepen.io/mattgreenberg/" target="_blank"><i class="fa fa-codepen">  </i></a></div>
+  </div>
+  <div class="volume"><i class="fa fa-volume-off" id="volume-off"></i><i class="fa fa-volume-up" id="volume-up"></i>
+    <div class="slider-volume"></div>
+  </div>
+  <div class="slide-up"><i class="fa fa-chevron-up"></i></div>
+</div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.min.js'></script>
+<script >(function() {
+  var billyBreathes, changePosition, changeSong, changeVolume, harryHood, pauseSong, playSong, playlist, suzyGreenberg, themeFromTheBottom, updatePositionSlider, updateSlider;
+
+  themeFromTheBottom = new Howl({
+    urls: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/377560/07_Theme_from_the_Bottom_(1).mp3'],
+    volume: window.volume
+  });
+
+  billyBreathes = new Howl({
+    urls: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/377560/10_Billy_Breathes_(1)_(1).mp3'],
+    volume: window.volume
+  });
+
+  harryHood = new Howl({
+    urls: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/377560/harry-hood-small.mp3'],
+    volume: window.volume
+  });
+
+  suzyGreenberg = new Howl({
+    urls: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/377560/suzy_greenberg_small.mp3'],
+    volume: window.volume
+  });
+
+  window.open = true;
+
+  window.volume = 0.5;
+
+  window.position = 0;
+
+  window.duration = 40.8;
+
+  playlist = [suzyGreenberg];
+
+  window.currentSong = playlist[0];
+
+  window.add = null;
+
+  changeSong = function(song) {
+    console.log(song);
+    window.currentSong.stop();
+    window.currentSong.pos(0);
+    window.position = 0;
+    $(".slider").slider("value", 0);
+    window.currentSong = song;
+    $(".play-song > i").removeClass('fa-play');
+    $(".play-song > i").addClass('fa-pause');
+    window.open = false;
+    return song.play();
+  };
+
+  updatePositionSlider = function() {
+    return window.position += 1;
+  };
+
+  playSong = function(song) {
+    song.play();
+    return window.add = setInterval(updatePositionSlider, 1000);
+  };
+
+  pauseSong = function(song) {
+    song.pause();
+    return clearInterval(window.add);
+  };
+
+  changeVolume = function(song) {
+    return song.volume(window.volume);
+  };
+
+  changePosition = function(song) {
+    return song.pos(window.position);
+  };
+
+  updateSlider = function() {
+    return $(".slider").slider("value", window.position);
+  };
+
+  $(function() {
+    var slideUp;
+    $(".slider").slider({
+      min: 0,
+      range: "min",
+      max: window.duration,
+      value: 0,
+      slide: function(event, ui) {
+        window.position = ui.value;
+        console.log(ui.value);
+        return changePosition(window.currentSong);
+      }
+    });
+    setInterval(updateSlider, 1000);
+    $("#volume-off").click(function() {
+      currentSong.volume(0);
+      return $(".slider-volume").slider("value", 0);
+    });
+    $("#volume-up").click(function() {
+      currentSong.volume(1);
+      return $(".slider-volume").slider("value", 100);
+    });
+    $(".slider-volume").slider({
+      min: 0,
+      range: "min",
+      max: 100,
+      value: 50,
+      slide: function(event, ui) {
+        console.log("hey");
+        window.volume = ui.value / 100;
+        return changeVolume(window.currentSong);
+      }
+    });
+    $("#play").click(function() {
+      if (window.open) {
+        playSong(window.currentSong);
+        $(".play-song > i").removeClass('fa-play');
+        $(".play-song > i").addClass('fa-pause');
+        return window.open = !window.open;
+      } else {
+        pauseSong(window.currentSong);
+        $(".play-song > i").removeClass('fa-pause');
+        $(".play-song > i").addClass('fa-play');
+        return window.open = !window.open;
+      }
+    });
+    slideUp = true;
+    $(".slide-up").click(function() {
+      if (slideUp) {
+        $(".song-list, .playlist-controls, .overlay").addClass("active");
+        $(".slide-up").html("<i class='fa fa-chevron-down'></i>");
+        return slideUp = !slideUp;
+      } else {
+        $(".song-list, .playlist-controls, .overlay").removeClass("active");
+        $(".slide-up").html("<i class='fa fa-chevron-up'></i>");
+        return slideUp = !slideUp;
+      }
+    });
+    return $("tr").click(function() {
+      if ($(this).attr('data-title') === "billyBreathes") {
+        changeSong(billyBreathes);
+        $(".slider").slider("option", "max", 331.6);
+        window.duration = 331.6;
+        $(".song").html("Billy Breathes");
+      } else if ($(this).attr('data-title') === "harryHood") {
+        $(".song").html("Harry Hood");
+        window.duration = 40.8;
+        $(".slider").slider("option", "max", 40.8);
+        changeSong(harryHood);
+      } else if ($(this).attr('data-title') === "suzyGreenberg") {
+        $(".song").html("Suzy Greenberg");
+        window.duration = 40.8;
+        $(".slider").slider("option", "max", 40.8);
+        changeSong(suzyGreenberg);
+      } else if ($(this).attr('data-title') === "themeFromTheBottom") {
+        changeSong(themeFromTheBottom);
+        $(".song").html("Theme From The Bottom");
+        $(".slider").slider("option", "max", 382.2);
+        window.duration = 382.2;
+      }
+      $(".song-list, .playlist-controls, .overlay").removeClass("active");
+      $(".slide-up").html("<i class='fa fa-chevron-up'></i>");
+      return slideUp = !slideUp;
+    });
+  });
+
+}).call(this);
+
+//# sourceURL=pen.js
+</script>
+</body></html>
