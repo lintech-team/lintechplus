@@ -775,23 +775,7 @@ Player.prototype.getBgColor = function(element)
 /*** In the player view Swipe left or right to change the current song ***/
 var listItems = [],
     detailItems = [],
-    playlist = 
-	
-	[
-	
-		{ "time": "178", "title": "Snowflake - Living Nightmare", "img": "https://dl.dropbox.com/s/wacl6yr2b32sqds/snowflake.jpg", "src": "https://lintech-team.github.io/lintechplus/Global%20week%20of%20prayer.%20Debora.mp3" 
-		}, 
-		{ "time": "124", "title": "Bensound - Dubstep", "img": "https://dl.dropbox.com/s/7a1psxm2i4m644k/dubstep2.jpg", "src": "https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20Debora.mp3?alt=media&token=a80ba90c-c204-4883-9da6-cf20eb2ac471" 
-		}, 
-		{ "time": "78", "title": "Secret Of Life - 42", "img": "https://dl.dropbox.com/s/z1j07kiqo9r2mj9/track3.jpeg", "src": "https://dl.dropbox.com/s/goyhvi2np0mov5n/track3.mp3" 
-		}, 
-		{ "time": "216", "title": "Bensound - Retrosoul", "img": "https://dl.dropbox.com/s/e2b9l3cbjy4wthw/retrosoul.jpg", "src": "https://dl.dropbox.com/s/lfc7z6kz2q1k2vo/retrosoul.mp3" 
-		}, 
-		{ "time": "175", "title": "Snowflake - Holiday Funky Blues", "img": "https://dl.dropbox.com/s/myu3b9qtf74sz3i/snowflake2.jpg", "src": "https://dl.dropbox.com/s/kwy27cjasc6yodw/snowflake3.mp3" 
-		}, 
-		{ "time": "105", "title": "Bensound - Happy Rock", "img": "https://dl.dropbox.com/s/fz8452movdjnfe8/happyrock.jpg", "src": "https://dl.dropbox.com/s/03abwi15hveg4yj/happyrock.mp3" 
-		}
-	];
+    playlist = [{ "time": "178", "title": "Snowflake - Living Nightmare", "img": "https://dl.dropbox.com/s/wacl6yr2b32sqds/snowflake.jpg", "src": "https://dl.dropbox.com/s/4ef8ana3rsm7sdu/snowflake.mp3" }, { "time": "124", "title": "Bensound - Dubstep", "img": "https://dl.dropbox.com/s/7a1psxm2i4m644k/dubstep2.jpg", "src": "https://dl.dropbox.com/s/ebsjr0uq9zfg9x0/dubstep.mp3" }, { "time": "78", "title": "Secret Of Life - 42", "img": "https://dl.dropbox.com/s/z1j07kiqo9r2mj9/track3.jpeg", "src": "https://dl.dropbox.com/s/goyhvi2np0mov5n/track3.mp3" }, { "time": "216", "title": "Bensound - Retrosoul", "img": "https://dl.dropbox.com/s/e2b9l3cbjy4wthw/retrosoul.jpg", "src": "https://dl.dropbox.com/s/lfc7z6kz2q1k2vo/retrosoul.mp3" }, { "time": "175", "title": "Snowflake - Holiday Funky Blues", "img": "https://dl.dropbox.com/s/myu3b9qtf74sz3i/snowflake2.jpg", "src": "https://dl.dropbox.com/s/kwy27cjasc6yodw/snowflake3.mp3" }, { "time": "105", "title": "Bensound - Happy Rock", "img": "https://dl.dropbox.com/s/fz8452movdjnfe8/happyrock.jpg", "src": "https://dl.dropbox.com/s/03abwi15hveg4yj/happyrock.mp3" }];
 
 playlist.forEach(function (el, i) {
   var _el$title$split = el.title.split('-');
