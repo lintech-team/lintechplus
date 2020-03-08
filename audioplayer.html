@@ -1,280 +1,468 @@
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 700px;
-  margin: auto;
-  text-align: left;
-  font-size: 9px;
-  font-family: tahoma;
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+    <title>MP3 Player</title>
+    <link rel=stylesheet href="style.css" media=all> 
+  </head>
   
+  <style>
+  
+body{
+  background-color: #f1f1f1;
+  color: #ffffff;
+    width: 100;
+  font-family: 'Roboto', sans-serif;
 }
-
-.title {
-  color: #009e9e;
-  font-size: 16px;
-  text-align: left;
-
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 9px;
-  color: white;
-  background-color: #009e9e;
-  text-align: center;
-  cursor: pointer;
+#myProgress {
   width: 100%;
-  font-size: 18px;
+   background-color: #d9d9f2; 
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-a {
-  text-decoration: none;
-  font-size: 16px;
+#myBar {
+  width: 0%;
+  height: 5px;
+  background-color: #009e9e;
+  border-radius: 10px;
+}
+
+.logo {
+  fill: red;
+}
+
+.btn-action{
+  cursor: pointer;
+  padding-top: 40px;
+  width: 30px;
+}
+
+.btn-ctn, .infos-ctn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infos-ctn{
+padding-top: 150px;
+}
+
+.btn-ctn > div {
+ padding: 5px;
+ margin-top: 48px;
+ margin-bottom: 18px;
+}
+
+.infos-ctn > div {
+ margin-bottom: 8px;
+ color: #009e9e;
+}
+
+.first-btn{
+  margin-left: 3px;
+}
+
+.duration{
+  padding: 10px;
+}
+
+.title{
+  margin-left: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+.player-ctn{
+  border-radius: 15px;
+  width: 100%;
+  background-color: #f1f1f1;
+  margin:auto;
+  margin-top: 0px;
+  margin-left: 0px;
+
+
+}
+
+.playlist-track-ctn{
+  display: flex;
+  background-color: #f1f1f1;
+  margin-top: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.playlist-track-ctn:last-child{
+  /*border: 1px solid #ffc266; */
+}
+
+.playlist-track-ctn > div{
+  margin:10px;
+}
+.playlist-info-track{
+  width: 100%;
+}
+.playlist-info-track,.playlist-duration{
+  padding-top: 7px;
+  padding-bottom: 7px;
   color: #009e9e;
+  font-size: 14px;
+  pointer-events: none;
+}
+.playlist-ctn{
+   padding-bottom: 20px;
+}
+.active-track{
+  background: #4d4d4d;
+  color: #009e9e !important;
+  font-weight: bold;
+  
 }
 
-button:hover, a:hover {
-  opacity: 0.7;
+.active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
+  color: #009e9e !important;
 }
+
+
+.playlist-btn-play{
+  pointer-events: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.fas{
+  color: #009e9e;
+  font-size: 20px;
+}
+
 </style>
-</head>
-<body>
+  <body>
 
-<div class="card">
-  <h1>Tittle: God's Plan</h1>
-  <p class="title">Kelvin Nyabuti</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e" type="audio/mpeg">
-Your browser does not support the audio element.
+
+<audio id="myAudio" ontimeupdate="onTimeUpdate()">
+  <!-- <source src="audio.ogg" type="audio/ogg"> -->
+  <source id="source-audio" src="" type="audio/mpeg">
+  Your browser does not support the audio element.
 </audio>
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
+<div class="player-ctn">
+  <div class="infos-ctn">
+    <div class="timer">00:00</div>
+    <div class="title"></div>
+    <div class="duration">00:00</div>
   </div>
-</div>
-
-<div class="card">
-  <h1>Tittle: But Amnon Had A Friend</h1>
-  <p class="title">Eld. Nimrod Magati</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20Amnon%20had%20a%20Friend.mp3?alt=media&token=a4f628b8-c378-4e2b-ae31-f5d503b7c1b8" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20Amnon%20had%20a%20Friend.mp3?alt=media&token=a4f628b8-c378-4e2b-ae31-f5d503b7c1b8" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
+  <div id="myProgress">
+    <div id="myBar"></div>
   </div>
-</div>
-
-<div class="card">
-  <h1>Tittle: David The Giant Killer</h1>
-  <p class="title">Eld. Nimrod Magati</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20David%20the%20giant%20killer.mp3?alt=media&token=a4ce93f4-8537-473f-bb32-fff1d73bc902" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20David%20the%20giant%20killer.mp3?alt=media&token=a4ce93f4-8537-473f-bb32-fff1d73bc902" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
+  <div class="btn-ctn">
+     <div class="btn-action first-btn" onclick="previous()">
+        <div id="btn-faws-back">
+          <i class='fas fa-step-backward'></i>
+        </div>
+     </div>
+     <div class="btn-action" onclick="rewind()">
+        <div id="btn-faws-rewind">
+          <i class='fas fa-backward'></i>
+        </div>
+     </div>
+     <div class="btn-action" onclick="toggleAudio()">
+        <div id="btn-faws-play-pause">
+          <i class='fas fa-play' id="icon-play"></i>
+          <i class='fas fa-pause' id="icon-pause" style="display: none"></i>
+        </div>
+     </div>
+     <div class="btn-play" onclick="forward()">
+        <div id="btn-faws-forward">
+          <i class='fas fa-forward'></i>
+        </div>
+     </div>
+     <div class="btn-action" onclick="next()">
+        <div id="btn-faws-next">
+          <i class='fas fa-step-forward'></i>
+        </div>
+     </div>
+     <div class="btn-mute" id="toggleMute" onclick="toggleMute()">
+        <div id="btn-faws-volume">
+          <i id="icon-vol-up" class='fas fa-volume-up'></i>
+          <i id="icon-vol-mute" class='fas fa-volume-mute' style="display: none"></i>
+        </div>
+     </div>
   </div>
+  <div class="playlist-ctn"></div>
 </div>
-  
-  <div class="card">
-  <h1>Tittle: Debora</h1>
-  <p class="title">Eld. Nimrod Magati</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20Debora.mp3?alt=media&token=a80ba90c-c204-4883-9da6-cf20eb2ac471" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20Debora.mp3?alt=media&token=a80ba90c-c204-4883-9da6-cf20eb2ac471" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+<script src=app.js></script>
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
-    <div class="card">
-  <h1>Tittle: Debora</h1>
-  <p class="title">Eld. Nimrod Magati</p>
-  <audio controls>
-  <source src="https://lintech-team.github.io/lintechplus/Global%20week%20of%20prayer.%20Debora.mp3" type="audio/ogg">
-  <source src="https://lintech-team.github.io/lintechplus/Global%20week%20of%20prayer.%20Debora.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+  </body>
+</html>
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
-  <div class="card">
-  <h1>Tittle: Fasting For Our Mates</h1>
-  <p class="title">Eld. Nimrod Magati</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20Fasting%20for%20our%20mates.mp3?alt=media&token=da52c3a2-91e8-4330-be6e-c6def7bb2348" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20Fasting%20for%20our%20mates.mp3?alt=media&token=da52c3a2-91e8-4330-be6e-c6def7bb2348" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
-  <div class="card">
-  <h1>Tittle: The Life Of Joseph</h1>
-  <p class="title">Eld. Nimrod Magati</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20The%20life%20of%20Joseph.mp3?alt=media&token=44450bfa-636b-41ea-8f32-5a23484c0f7e" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/Global%20week%20of%20prayer.%20The%20life%20of%20Joseph.mp3?alt=media&token=44450bfa-636b-41ea-8f32-5a23484c0f7e" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+<script>
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
+  function createTrackItem(index,name,duration){
+    var trackItem = document.createElement('div');
+    trackItem.setAttribute("class", "playlist-track-ctn");
+    trackItem.setAttribute("id", "ptc-"+index);
+    trackItem.setAttribute("data-index", index);
+    document.querySelector(".playlist-ctn").appendChild(trackItem);
 
+    var playBtnItem = document.createElement('div');
+    playBtnItem.setAttribute("class", "playlist-btn-play");
+    playBtnItem.setAttribute("id", "pbp-"+index);
+    document.querySelector("#ptc-"+index).appendChild(playBtnItem);
+
+    var btnImg = document.createElement('i');
+    btnImg.setAttribute("class", "fas fa-play");
+    btnImg.setAttribute("height", "40");
+    btnImg.setAttribute("width", "40");
+    btnImg.setAttribute("id", "p-img-"+index);
+    document.querySelector("#pbp-"+index).appendChild(btnImg);
+
+    var trackInfoItem = document.createElement('div');
+    trackInfoItem.setAttribute("class", "playlist-info-track");
+    trackInfoItem.innerHTML = name
+    document.querySelector("#ptc-"+index).appendChild(trackInfoItem);
+
+    var trackDurationItem = document.createElement('div');
+    trackDurationItem.setAttribute("class", "playlist-duration");
+    trackDurationItem.innerHTML = duration
+    document.querySelector("#ptc-"+index).appendChild(trackDurationItem);
+  }
+
+  var listAudio = [
+    {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    },
+    {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    },
+    {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    },
+        {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    },
+        {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    },
+        {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    },
+        {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    },
+        {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    },
+        {
+      name:"Bro Kelvin Nyabuti - GOD'S PLAN",
+      file:"https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/30th%20June-%20Bro.%20Kelvin%20Nyabuti.mp3?alt=media&token=0ed2daac-796c-407c-9833-51af4a8ad29e",
+      duration:"24-03-19"
+    }
     
-  <div class="card">
-  <h1>Tittle: Stewardship</h1>
-  <p class="title">Pr. Samuel Ngugi</p>
-      <p>Stewardship Director for Rift Valley Conference</p>
-      <p>Theme: Put God First</p>
-     <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/10-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=ee4bfd3b-c8d3-4990-8d8d-1dd4bc7500c0" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/10-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=ee4bfd3b-c8d3-4990-8d8d-1dd4bc7500c0" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+  ]
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
+  for (var i = 0; i < listAudio.length; i++) {
+      createTrackItem(i,listAudio[i].name,listAudio[i].duration);
+  }
+  var indexAudio = 0;
+
+  function loadNewTrack(index){
+    var player = document.querySelector('#source-audio')
+    player.src = listAudio[index].file
+    document.querySelector('.title').innerHTML = listAudio[index].name
+    this.currentAudio = document.getElementById("myAudio");
+    this.currentAudio.load()
+    this.toggleAudio()
+    this.updateStylePlaylist(this.indexAudio,index)
+    this.indexAudio = index;
+  }
+
+  var playListItems = document.querySelectorAll(".playlist-track-ctn");
+
+  for (let i = 0; i < playListItems.length; i++){
+    playListItems[i].addEventListener("click", getClickedElement.bind(this));
+  }
+
+  function getClickedElement(event) {
+    for (let i = 0; i < playListItems.length; i++){
+      if(playListItems[i] == event.target){
+        var clickedIndex = event.target.getAttribute("data-index")
+        if (clickedIndex == this.indexAudio ) { // alert('Same audio');
+            this.toggleAudio()
+        }else{
+            loadNewTrack(clickedIndex);
+        }
+      }
+    }
+  }
+
+  document.querySelector('#source-audio').src = listAudio[indexAudio].file
+  document.querySelector('.title').innerHTML = listAudio[indexAudio].name
+
+
+  var currentAudio = document.getElementById("myAudio");
+
+  currentAudio.load()
   
-  <div class="card">
-  <h1>Tittle: Stewardship at the well of Jacob</h1>
-  <p class="title">Pr. Samuel Ngugi</p>
-      <p>Stewardship Director for Rift Valley Conference</p>
-      <p>Theme: Put God First</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/11-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=860fc201-5408-4c4c-8ed1-168c74c534ea" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/11-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=860fc201-5408-4c4c-8ed1-168c74c534ea" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+  currentAudio.onloadedmetadata = function() {
+        document.getElementsByClassName('duration')[0].innerHTML = this.getMinutes(this.currentAudio.duration)
+  }.bind(this);
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
-  <div class="card">
-  <h1>Tittle: In God's hands</h1>
-  <p class="title">Pr. Samuel Ngugi</p>
-      <p>Stewardship Director for Rift Valley Conference</p>
-      <p>Theme: Put God First</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/12-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=d1f9e68d-9db5-49d7-b965-00e46f19838a" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/12-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=d1f9e68d-9db5-49d7-b965-00e46f19838a" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+  var interval1;
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
-  <div class="card">
-  <h1>Tittle: Do not forget thr Lord</h1>
-  <p class="title">Pr. Samuel Ngugi</p>
-      <p>Stewardship Director for Rift Valley Conference</p>
-      <p>Theme: Put God First</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/13-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=3a7b4dbd-84dd-435f-8f3a-a76b3e21e6a7" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/13-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=3a7b4dbd-84dd-435f-8f3a-a76b3e21e6a7" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+  function toggleAudio() {
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
-  
-  <div class="card">
-  <h1>Tittle: God or Gold?</h1>
-  <p class="title">Pr. Samuel Ngugi</p>
-      <p>Stewardship Director for Rift Valley Conference</p>
-      <p>Theme: Put God First</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/14-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=ab2dc661-9a36-4158-bebb-8f212755f92c" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/14-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=ab2dc661-9a36-4158-bebb-8f212755f92c" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+    if (this.currentAudio.paused) {
+      document.querySelector('#icon-play').style.display = 'none';
+      document.querySelector('#icon-pause').style.display = 'block';
+      document.querySelector('#ptc-'+this.indexAudio).classList.add("active-track");
+      this.playToPause(this.indexAudio)
+      this.currentAudio.play();
+    }else{
+      document.querySelector('#icon-play').style.display = 'block';
+      document.querySelector('#icon-pause').style.display = 'none';
+      this.pauseToPlay(this.indexAudio)
+      this.currentAudio.pause();
+    }
+  }
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
+  function pauseAudio() {
+    this.currentAudio.pause();
+    clearInterval(interval1);
+  }
 
-  <div class="card">
-  <h1>Tittle: Stewardship</h1>
-  <p class="title">Pr. Samuel Ngugi</p>
-      <p>Stewardship Director for Rift Valley Conference</p>
-      <p>Theme: Put God First</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/15-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=1fb72f45-db2c-4a01-ab82-86741a5089b9" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/15-03-2019%20STEWARDSHIP%20FINAL.mp3?alt=media&token=1fb72f45-db2c-4a01-ab82-86741a5089b9" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+  var timer = document.getElementsByClassName('timer')[0]
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
-    <div class="card">
-  <h1>Tittle: Stewardship Sabbath</h1>
-  <p class="title">Pr. Samuel Ngugi</p>
-      <p>Stewardship Director for Rift Valley Conference</p>
-      <p>Theme: Put God First</p>
-  <audio controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/16-03-2019%20SABBATHSHIP%20final%20.mp3?alt=media&token=995fc756-1882-4b92-bbb9-9c95c15a80ba" type="audio/ogg">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/16-03-2019%20SABBATHSHIP%20final%20.mp3?alt=media&token=995fc756-1882-4b92-bbb9-9c95c15a80ba" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+  var barProgress = document.getElementById("myBar");
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
-      <div class="card">
-  <h1>Tittle: Sabbath</h1>
-  <p class="title">Pr. Samuel Ngugi</p>
-  <audio controls>
-  <source src="https://drive.google.com/file/d/1x4pebYQuqtNAJauYBztbvBnkc99UyIFy/view?usp=sharing" type="audio/ogg">
-  <source src="https://drive.google.com/file/d/1x4pebYQuqtNAJauYBztbvBnkc99UyIFy/view?usp=sharing" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
 
- <div style="margin: 40px 20;">
-    <a href="#"><i class="fa fa-download"></i></a>  
-  </div>
-</div>
-  
+  var width = 0;
 
+  function onTimeUpdate() {
+    var t = this.currentAudio.currentTime
+    timer.innerHTML = this.getMinutes(t);
+    this.setBarProgress();
+    if (this.currentAudio.ended) {
+      document.querySelector('#icon-play').style.display = 'block';
+      document.querySelector('#icon-pause').style.display = 'none';
+      this.pauseToPlay(this.indexAudio)
+      if (this.indexAudio < listAudio.length-1) {
+          var index = parseInt(this.indexAudio)+1
+          this.loadNewTrack(index)
+      }
+    }
+  }
+
+
+  function setBarProgress(){
+    var progress = (this.currentAudio.currentTime/this.currentAudio.duration)*100;
+    document.getElementById("myBar").style.width = progress + "%";
+  }
+
+
+  function getMinutes(t){
+    var min = parseInt(parseInt(t)/60);
+    var sec = parseInt(t%60);
+    if (sec < 10) {
+      sec = "0"+sec
+    }
+    if (min < 10) {
+      min = "0"+min
+    }
+    return min+":"+sec
+  }
+
+  var progressbar = document.querySelector('#myProgress')
+  progressbar.addEventListener("click", seek.bind(this));
+
+
+  function seek(event) {
+    var percent = event.offsetX / progressbar.offsetWidth;
+    this.currentAudio.currentTime = percent * this.currentAudio.duration;
+    barProgress.style.width = percent*100 + "%";
+  }
+
+  function forward(){
+    this.currentAudio.currentTime = this.currentAudio.currentTime + 5
+    this.setBarProgress();
+  }
+
+  function rewind(){
+    this.currentAudio.currentTime = this.currentAudio.currentTime - 5
+    this.setBarProgress();
+  }
+
+
+  function next(){
+    if (this.indexAudio <listAudio.length-1) {
+        var oldIndex = this.indexAudio
+        this.indexAudio++;
+        updateStylePlaylist(oldIndex,this.indexAudio)
+        this.loadNewTrack(this.indexAudio);
+    }
+  }
+
+  function previous(){
+    if (this.indexAudio>0) {
+        var oldIndex = this.indexAudio
+        this.indexAudio--;
+        updateStylePlaylist(oldIndex,this.indexAudio)
+        this.loadNewTrack(this.indexAudio);
+    }
+  }
+
+  function updateStylePlaylist(oldIndex,newIndex){
+    document.querySelector('#ptc-'+oldIndex).classList.remove("active-track");
+    this.pauseToPlay(oldIndex);
+    document.querySelector('#ptc-'+newIndex).classList.add("active-track");
+    this.playToPause(newIndex)
+  }
+
+  function playToPause(index){
+    var ele = document.querySelector('#p-img-'+index)
+    ele.classList.remove("fa-play");
+    ele.classList.add("fa-pause");
+  }
+
+  function pauseToPlay(index){
+    var ele = document.querySelector('#p-img-'+index)
+    ele.classList.remove("fa-pause");
+    ele.classList.add("fa-play");
+  }
+
+
+  function toggleMute(){
+    var btnMute = document.querySelector('#toggleMute');
+    var volUp = document.querySelector('#icon-vol-up');
+    var volMute = document.querySelector('#icon-vol-mute');
+    if (this.currentAudio.muted == false) {
+       this.currentAudio.muted = true
+       volUp.style.display = "none"
+       volMute.style.display = "block"
+    }else{
+      this.currentAudio.muted = false
+      volMute.style.display = "none"
+      volUp.style.display = "block"
+    }
+  }
+
+</script>
 
 </body>
-</html>
+</html> 
 
