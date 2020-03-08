@@ -1,385 +1,343 @@
 <!DOCTYPE html>
-<html>
-<title>NEWLIFE BLOG</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+
 <style>
-h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
-body {font-family: "Open Sans"}
-</style>
-<body class="w3-light-grey">
 
-<!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-black w3-hide-small">
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
-</div>
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+*
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+body
+{
+  background-color: #dadde6;
+  font-family: arial
+}
+
+.fl-left{float: left}
+
+.fl-right{float: right}
+
+.container
+{
+  width: 90%;
+  margin: 100px auto
+}
+
+h1
+{
+  text-transform: uppercase;
+  font-weight: 900;
+  border-left: 10px solid #fec500;
+  padding-left: 10px;
+  margin-bottom: 30px
+}
+
+.row{overflow: hidden}
+
+.card
+{
+  display: table-row;
+  width: 49%;
+  background-color: #fff;
+  color: #989898;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  border-radius: 4px;
+  position: relative
+}
+
+.card + .card{margin-left: 2%}
+
+.date
+{
+  display: table-cell;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  border-right: 2px dashed #dadde6
+}
+
+.date:before,
+.date:after
+{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #DADDE6;
+  position: absolute;
+  top: -15px ;
+  right: -15px;
+  z-index: 1;
+  border-radius: 50%
+}
+
+.date:after
+{
+  top: auto;
+  bottom: -15px
+}
+
+.date time
+{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+.date time span{display: block}
+
+.date time span:first-child
+{
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 250%
+}
+
+.date time span:last-child
+{
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: -10px
+}
+
+.card-cont
+{
+  display: table-cell;
+  width: 75%;
+  font-size: 85%;
+  padding: 10px 10px 30px 50px
+}
+
+.card-cont h3
+{
+  color: #3C3C3C;
+  font-size: 130%
+}
+
+.row:last-child .card:last-of-type .card-cont h3
+{
+  text-decoration: line-through
+}
+
+.card-cont > div
+{
+  display: table-row
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i,
+.card-cont .even-date time,
+.card-cont .even-info p
+{
+  display: table-cell
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i
+{
+  padding: 5% 5% 0 0
+}
+
+.card-cont .even-info p
+{
+  padding: 30px 50px 0 0
+}
+
+.card-cont .even-date time span
+{
+  display: block
+}
+
+.card-cont a
+{
+  display: block;
+  text-decoration: none;
+  width: 80px;
+  height: 30px;
+  background-color: #D8DDE0;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 2px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px
+}
+
+.row:last-child .card:first-child .card-cont a
+{
+  background-color: #037FDD
+}
+
+.row:last-child .card:last-child .card-cont a
+{
+  background-color: #F8504C
+}
+
+@media screen and (max-width: 860px)
+{
+  .card
+  {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px
+  }
   
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1600px">
-
-  <!-- Header -->
-  <header class="w3-container w3-center w3-padding-48 w3-white">
-    <h1 class="w3-xxxlarge"><b>NEWLIFE BLOG</b></h1>
-    <h6>Welcome to the blog of <span class="w3-tag">Newlife SDA Church</span></h6>
-  </header>
-
-  <!-- Image header -->
-  <header class="w3-display-container w3-wide" id="home">
-    <img class="w3-image" src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/newlifechurch.png?alt=media&token=385a9311-84fa-43cc-b864-13d2e52130c2" alt="Fashion Blog" width="1600" height="1060">
-    <div class="w3-display-left w3-padding-large">
-      <h1 class="w3-text-white">Newlife</h1>
-      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Church Blog</b></h1>
-      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
-    </div>
-  </header>
-
-  <!-- Grid -->
-  <div class="w3-row w3-padding w3-border">
-
-    <!-- Blog entries -->
-    <div class="w3-col l8 s12">
-    
-      <!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h3>New Year 2020</h3>
-          <h5>Worship and Thanksgiving Service, <span class="w3-opacity">Jan 1, 2020</span></h5>
-        </div>
-
-        <div class="w3-justify">
-          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/nwyear.png?alt=media&token=5487ddf1-efb7-4fb6-a702-db68669b578f" alt="Church Blog" style="width:100%" class="w3-padding-16">
-          <p><strong>Happy New Year 2020!</strong> Come let us start the new year 2020 together in the presence of the Lord.</p>
-          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
-          <p class="w3-clear"></p>
-          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-            <hr>
-              <div class="w3-col l2 m3">
-                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
-              </div>
-              <div class="w3-col l10 m9">
-                <h4>Kibet Ronoh Josphat <span class="w3-opacity w3-medium">Jan 1, 2020, 7:32 AM</span></h4>
-                <p>Happy new year brethren</p>
-              </div>
-          </div>
-        </div>
-      </div>
-      <hr>
-
-      <!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h3>BIBLE STUDY</h3>
-          <h5>Elisha and Naaman, <span class="w3-opacity">Dec 31, 2019</span></h5>
-        </div>
-
-        <div class="w3-justify">
-          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/gless03.jpg?alt=media&token=ee476eaa-b259-41a7-a943-d651ced7aaba" alt="Church Blog" style="width:100%" class="w3-padding-16">
-          <p><strong>Yes, these steps look easy. Easy enough to set aside for “later.” Easy enough to think that maybe they're not so important, or not so special. But that would be a mistake.</strong> The Bible tells the story of Naaman, the commander of the Syrian army. He contracted leprosy which was incurable and terminal. One of his slaves, an Israelite, suggested that he go to Samaria, where the prophet Elisha would be able to heal him.</p>
-          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo2')"><b>READ MORE »  </b> <span class="w3-tag w3-white">2</span></button></p>
-          <p class="w3-clear"></p>
-          
-          <!-- Example of comment field -->
-          
-                        
-              
-          <div id="demo2" style="display:none">
-            <div class="w3-row">
-              <hr>
-              
-               <p>Elisha told Naaman to go wash himself in the river Jordan, and to immerse himself seven times if he wanted to be healed. Naaman was insulted. That river was muddy and it was unacceptable for a high official to bath in it.</p>
-
-               <p>He was about to leave in a rage when one of his soldiers pointed out that if Elisha had asked him to do something great and difficult, he would have followed instructions without question. Yes, the instructions to dunk himself in the Jordan were simple, but what did he have to lose?</p>
-
-               <p><strong>"Yes, the instructions to dunk himself in the Jordan were simple, but what did he have to lose?"</strong></p>
-
-               <p>Naaman accepted the counsel, followed Elisha's instructions and was healed. (2 Kings 5:1-15)</p>
-
-               <p>Just like Naaman, you are free to choose your course of action. You can continue struggling with your troubles, drifting through life without meaning or purpose, and missing out on a journey that will bring you eternal life. Or, you can follow the simple steps on this page. The choice is yours.</p>
-
-
-               <p></p>
-
-               <p></p>
-
-               
-               
-              <div class="w3-col l2 m3">
-                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
-              </div>
-              <div class="w3-col l10 m9">
-
-              
-                <h4>Amber <span class="w3-opacity w3-medium">Dec 31, 2019, 10:52 PM</span></h4>
-                <p>Amen.</p><br>
-              </div>
-            </div>
-            <div class="w3-row w3-margin-bottom">
-              <div class="w3-col l2 m3">
-                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
-              </div>
-              <div class="w3-col l10 m9">
-                <h4>Angie <span class="w3-opacity w3-medium">Dec 31, 2019, 9:12 PM</span></h4>
-                <p>Amen!!</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h3>Special Message</h3>
-          <h5>The Gift of Jesus Christ, <span class="w3-opacity">Dec ,30 2019</span></h5>
-        </div>
-
-        <div class="w3-justify">
-          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/image3.jpg?alt=media&token=4395b0fb-8d40-4415-9758-489bae9a0c82" alt="Runway" style="width:100%" class="w3-padding-16">
-          
-          <p>As we come to the close of another year, I would like to invite you for a moment to consider the most amazing gift of Jesus Christ. While we do not know exactly when He was born, the important thing is that we know for certain He was born, and that He came to this Earth on a very special mission.<p>
-          
-          
-          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>READ MORE »  </b> <span class="w3-tag w3-white">3</span></button></p>
-          <p class="w3-clear"></p>
-          
-          <!-- Example of comment field -->
-          <div id="demo3" style="display:none">
-            <hr>
-            
-               <p>Foretold by prophecy and announced by a heavenly being more than 2,000 years ago, we read in Matthew 1:21—“And she [Mary] will bring forth a Son, and you shall call His name Jesus, for He will save His people from their sins.”</p>
-               
-               <p>Oh, what a wonderful gift from heaven itself—God Himself—“Emmanuel,” came to dwell with us—to live, and teach, and heal, and die—to save us from our sins and to restore us to His likeness! </p>
-               
-               <p>Praise God He lives and is coming back soon—this time to take us to live with Him forever. Oh, what a day that will be—all made possible by the One who willingly humbled Himself, was born in a manger and died on a cross to save you and me.</p>
-               
-               <p>Let us pause for a moment as we consider the profound words of the angel, recorded in Luke, chapter 2:</p>
-               
-               <p>“Do not be afraid, for behold, I bring you good tidings of great joy which will be to all people. For there is born to you this day in the city of David a Savior, who is Christ the Lord. And this will be the sign to you: You will find a Babe wrapped in swaddling cloths, lying in a manger.”</p>
-               
-               <p>“And suddenly there was with the angel a multitude of the heavenly host praising God and saying: ‘Glory to God in the highest, And on earth peace, goodwill toward men’” (vss. 10-14)</p>
-               
-               <p>May the joy of His birth, the peace of His presence, and the hope of His soon return fill your heart with the Gift of His immeasurable love.</p>
-               
-               <p>Maranatha!</p>
-               
-        
-
-            <div class="w3-row w3-margin-bottom">
-              <div class="w3-col l2 m3">
-                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
-              </div>
-              <div class="w3-col l10 m9">
-                <h4>Jane <span class="w3-opacity w3-medium">Dec ,30 2019, 7:22 PM</span></h4>
-                <p>That was a powerful message. Be Blessed.</p>
-              </div>
-            </div>
-            <div class="w3-row w3-margin-bottom">
-              <div class="w3-col l2 m3">
-                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
-              </div>
-              <div class="w3-col l10 m9">
-                <h4>John <span class="w3-opacity w3-medium">Dec ,30 2019, 10:32 PM</span></h4>
-                <p>Keep up the GREAT work! I am Blessed.</p>
-              </div>
-            </div>
-            <div class="w3-row w3-margin-bottom">
-              <div class="w3-col l2 m3">
-                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
-              </div>
-              <div class="w3-col l10 m9">
-                <h4>Anja <span class="w3-opacity w3-medium">Dec ,30 2019, 9:12 PM</span></h4>
-                <p>Wonderful message.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    <!-- END BLOG ENTRIES -->
-    </div>
-
-    <!-- About/Information menu -->
-    <div class="w3-col l4">
-      <!-- About Card -->
-      <div class="w3-white w3-margin">
-        <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale">
-        <div class="w3-container w3-black">
-          <h4>Newlife SDA Church<h4> 
-          <p>Newlife SDA Church,
-5th Ngong Avenue, P.O. Box 40829 - 00100 Nairobi, Kenya
-+254 (795) 638070
-+254 721 167 150 (Sis. Naomi Mayaka - Church Secretary)
-info@newlifesdanairobi.org.</p>
-        </div>
-      </div>
-      <hr>
-
-      <!-- Posts -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Popular Posts</h4>
-        </div>
-        <ul class="w3-ul w3-hoverable w3-white">
-          <li class="w3-padding-16">
-            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Newlife</span>
-            <br>
-            <span>Happy New Year</span>
-          </li>
-          <li class="w3-padding-16">
-            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Newlife</span>
-            <br>
-            <span>Happy New Year</span>
-          </li>
-          <li class="w3-padding-16">
-            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Newlife</span>
-            <br>
-            <span>Happy New Year</span>
-          </li>
-          <li class="w3-padding-16">
-            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
-            <span class="w3-large">Newlife</span>
-            <br>
-            <span>Happy New Year</span>
-          </li>
-        </ul>
-      </div>
-      <hr>
-
-      <!-- Advertising -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Advertise</h4>
-        </div>
-        <div class="w3-container w3-white">
-          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale">
-          </div>
-        </div>
-      </div>
-      <hr>
-
-      <!-- Tags -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Tags</h4>
-        </div>
-        <div class="w3-container w3-white">
-          <p>
-            <span class="w3-tag w3-black w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
-          </p>
-        </div>
-      </div>
-      <hr>
-
-      <!-- Inspiration -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Inspiration</h4>
-        </div>
-        <div class="w3-row-padding w3-white">
-          <div class="w3-col s6">
-            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
-            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
-          </div>
-          <div class="w3-col s6">
-            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale"></p>
-            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
-         </div>
-        </div>
-      </div>
-      <hr>
-
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Follow Us</h4>
-        </div>
-        <div class="w3-container w3-xlarge w3-padding">
-          <i class="fa fa-facebook-official w3-hover-opacity"></i>
-          <i class="fa fa-instagram w3-hover-opacity"></i>
-          <i class="fa fa-snapchat w3-hover-opacity"></i>
-          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-          <i class="fa fa-twitter w3-hover-opacity"></i>
-          <i class="fa fa-linkedin w3-hover-opacity"></i>
-        </div>
-      </div>
-      <hr>
-      
-      <!-- Subscribe -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-black">
-          <h4>Subscribe</h4>
-        </div>
-        <div class="w3-container w3-white">
-          <p>Enter your e-mail below and get notified on the latest blog posts.</p>
-          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button></p>
-        </div>
-      </div>
-
-    <!-- END About/Intro Menu -->
-    </div>
-
-  <!-- END GRID -->
-  </div>
-
-<!-- END w3-content -->
-</div>
-
-<!-- Subscribe Modal -->
-<div id="subscribe" class="w3-modal w3-animate-opacity">
-  <div class="w3-modal-content" style="padding:32px">
-    <div class="w3-container w3-white">
-      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
-      <h2 class="w3-wide">SUBSCRIBE</h2>
-      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-dark-grey" style="padding:32px">
-  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
-
-<script>
-// Toggle between hiding and showing blog replies/comments
-document.getElementById("myBtn").click();
-function myFunction(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
+  .card + .card{margin-left: 0}
+  
+  .card-cont .even-date,
+  .card-cont .even-info
+  {
+    font-size: 75%
   }
 }
 
-function likeFunction(x) {
-  x.style.fontWeight = "bold";
-  x.innerHTML = "✓ Liked";
-}
+</style>
+<body>
+
+
+<section class="container">
+<h1>upcomming </h1>
+  <div class="row">
+    <article class="card fl-left">
+      <section class="date">
+        <time datetime="23th feb">
+          <span>14</span><span>Mar</span>
+        </time>
+      </section>
+      <section class="card-cont">
+        <small>Music Sabbath</small>
+        <h3>live in Newlife SDA Church</h3>
+        <div class="even-date">
+         <i class="fa fa-calendar"></i>
+         <time>
+           <span>Saturday 14th March 2020</span>
+           <span>07:00 AM to 6:30 PM</span>
+         </time>
+        </div>
+        <div class="even-info">
+          <i class="fa fa-map-marker"></i>
+          <p>
+            5th Ngong Avenue Nairobi, Kenya
+          </p>
+        </div>
+        <a href="#">#MusicSabbath</a>
+      </section>
+    </article>
+    <article class="card fl-left">
+      <section class="date">
+        <time datetime="23th feb">
+          <span>20</span><span>Mar</span>
+        </time>
+      </section>
+      <section class="card-cont">
+        <small>TMI</small>
+        <h3>TOTAL MEMBER INVOLVEMENT</h3>
+        <div class="even-date">
+         <i class="fa fa-calendar"></i>
+         <time>
+           <span>Friday 20th March 2020</span>
+           <span>----------to----------</span>
+		   <span>Saturday 4th April 2020</span>
+
+         </time>
+        </div>
+        <div class="even-info">
+          <i class="fa fa-map-marker"></i>
+          <p>
+            5th Ngong Avenue Nairobi, Kenya
+          </p>
+        </div>
+        <a href="#">#tmi2020</a>
+      </section>
+    </article>
+  </div>
+  <div class="row">
+    <article class="card fl-left">
+      <section class="date">
+        <time datetime="23th feb">
+          <span>10</span><span>Apr</span>
+        </time>
+      </section>
+      <section class="card-cont">
+        <small>retreat</small>
+        <h3>Adventist Women Ministries</h3>
+	    <h3>Newlife Retreat 2020</h3>
+        <div class="even-date">
+         <i class="fa fa-calendar"></i>
+         <time>
+           <span>Tuesday 10th April 2020</span>
+           <span>----------to----------</span>
+		   <span>Friday 13th April 2020</span>
+		   <span></span>
+		   <span></span>
+		   <span></span>
+		   <span>cost 13,000/-</span>
+		   <span>Pay Bill 861200 acc: Easter retreat</span>
+		   <span>sms 0720 028 941</span>
+		   <span>sms 0722 505 916</span>
+
+
+         </time>
+        </div>
+        <div class="even-info">
+          <i class="fa fa-map-marker"></i>
+          <p>
+            Blue ridge hotel rusinga
+          </p>
+
+        </div>
+        <a href="#">book-now</a>
+      </section>
+    </article>
+    <article class="card fl-left">
+      <section class="date">
+        <time datetime="23th feb">
+          <span>19</span><span>Apr</span>
+        </time>
+      </section>
+      <section class="card-cont">
+        <small>vbs 2020</small>
+        <h3>Vacation Bible School</h3>
+        <div class="even-date">
+         <i class="fa fa-calendar"></i>
+         <time>
+           <span>Sunday 19th April 2020</span>
+           <span>----------to----------</span>
+		   <span>Saturday 25th April 2020</span>
+
+         </time>
+        </div>
+        <div class="even-info">
+          <i class="fa fa-map-marker"></i>
+          <p>
+            5th Ngong Avenue Nairobi, Kenya
+          </p>
+        </div>
+        <a href="#">book-now</a>
+      </section>
+    </article>
+  </div>
+</div>
+
+  
+
+<script>
+
+
+
 </script>
 
 </body>
