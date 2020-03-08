@@ -1,916 +1,386 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html>
+<title>NEWLIFE BLOG</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+body {font-family: "Open Sans"}
+</style>
+<body class="w3-light-grey">
 
-
-<!DOCTYPE html><html class=''>
-<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/emoreno911/pen/zNMOew?depth=everything&limit=all&order=popularity&page=86&q=material+&show_forks=false" />
-
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:100,400,500,700'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'>
-<style class="cp-pen-styles">body {
-  font-family: 'Roboto', sans-serif;
-  color: #444;
-  background-color: #f3f3f3;
-  background-color: #e3e3e3;
-}
-
-.wrapper {
-  background-color: #f8f8f8;
-  position: relative;
-  display: flex;
-  height: 610px;
-  width: 365px;
-  margin: 10px auto;
-  box-shadow: 0px 2px 15px #ddc;
-  /*border-radius: 5px;*/
-}
-
-.list {
-  width: 100%;
-  height: 100%;
-}
-
-.list header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 0 15px 0 35px;
-  box-shadow: 0 1px 15px #e3e3e3;
-}
-
-.list header > * { display: inline-block; }
-
-.list header h3 {
-  min-width: 220px;
-  font-weight: 400;
-  font-size: 20px;
-  margin: 15px 20px 15px 40px;
-  flex-grow: 1;
-}
-
-.list header i {
-    font-size: 24px;
-}
-
-.list section {
-  height: calc(100% - 64px);
-  overflow: hidden;
-}
-
-.list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-  height: 84px;
-}
-
-.list-item > * {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.list-item .thumb {
-  width: 64px;
-  height: 64px;
-  margin: 10px;
-}
-
-.list-item img { 
-  position: absolute;
-  left: 12px;
-  width: 64px; 
-  height: 64px; 
-  border-radius: 5px;
-  box-shadow: 0px 2px 5px #999;
-  cursor: pointer;
-  z-index: 1;
-  transition: all .4s ease;
-
-}
-.list-item img.open { 
-    top: 0 !important;
-    /*top: -54px !important;*/
-    left: 0;
-    height: 365px;
-    width: 100%;
-    z-index: 10;
-    transition: all .4s ease-in-out;
-}
-
-/*************************************************/
-@keyframes expand-on {
-  from { transform: translateY(160px); opacity: 0 }
-  to { transform: translateY(0); opacity: 1 }
-}
-
-@keyframes expand-off {
-  from { transform: translateY(0); opacity: 1 }
-  to { transform: translateY(160px); opacity: 0 }
-}
-
-@keyframes fade-in {
-  from { opacity: 0 }
-  to { opacity: 1 }
-}
-/*************************************************/
-
-.list-item span {
-  margin-bottom: 5px;
-}
-.list-item small {
-  color: #888;
-  font-size: 12px;
-}
-
-.list-item .title { flex-grow: 1; padding-left: 5px; min-width: 190px}
-.list-item .title > * { display: block; }
-
-.list-item .length { padding: 20px; }
-
-.detail {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  z-index: 10;
-}
-
-.detail.open { display: flex; }
-
-.detail i.close { opacity: 0; }
-.detail.open i.close { opacity: 1; animation: fade-in .6s ease; } 
-
-.detail.open .info .title { animation: expand-on .5s ease }
-.detail.open .player { animation: expand-on .25s ease }
-
-.detail.lock .info .title,
-.detail.lock .player { animation: expand-off .3s ease }
-
-.info .title i,
-.player .track,
-.player .controls i { opacity: 0; }
-
-.info .title i:nth-child(1) { transform: translateX(40px); }
-.info .title i:nth-child(3) { transform: translateX(-40px); }
-
-.player .controls i:nth-child(1) { transform: translateX(80px); }
-.player .controls i:nth-child(2) { transform: translateX(40px); }
-.player .controls i:nth-child(4) { transform: translateX(-40px); }
-.player .controls i:nth-child(5) { transform: translateX(-80px); }
-
-.detail.ready .info .title > *,
-.detail.ready .player .track,
-.detail.ready .player .controls > * {
-  opacity: 1; 
-  transform: translateX(0); 
-  transition: all .4s ease;
-}
-
-/*.detail .info img { width: 100%; }
-.detail .info img { opacity: 0 } 
-.detail.lock .info img { opacity: 0 !important; } 
-.detail.ready .info img { opacity: 1; animation: fade-in .4s ease }*/
-
-.detail .info .thumb > div { width: 100%; }
-.detail .info .thumb { opacity: 0 } 
-.detail.lock .info .thumb { opacity: 0 !important; } /* this must be important */
-.detail.ready .info .thumb { opacity: 1; animation: fade-in .4s ease }
-.detail.ready .info .thumb { background-color: #444; }
-
-/*#4f6 #82d*/
-.player {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #fff; 
-  flex-grow: 1; 
-}
-
-.player .controls {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.player .controls i { font-size: 26px; color: #666; }
-
-.player .controls .zmdi-fast-rewind,
-.player .controls .zmdi-fast-forward { cursor: pointer; }
-
-.player .track { padding: 0 10px; }
-
-.player .track .counter { 
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: .5;
-  color: #666;
-  margin-top: 5px;
-}
-
-.player .track .progress {
-  width: 100%;
-    height: 3px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    position: relative;
-    background-color: rgba(0,0,0,0.3);
-    cursor: pointer;
-  margin-top: -4px;
-}
-
-.player .track .bar {
-  position: absolute;
-  background-color: #666;
-  height: 100%;
-  width: 0;
-  border-radius: 10px;
-  transition: all .4s ease;
-}
-
-.player .track .bar:before{
-  content: "";
-  display: block;
-  position: absolute;
-  /*right: -5px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  top: -3px;*/
+<!-- Navigation bar with social media icons -->
+<div class="w3-bar w3-black w3-hide-small">
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+</div>
   
-  right: -3px;
-    width: 4px;
-    height: 8px;
-    top: -2px;
-}
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
 
-.info .slide {
-  display: flex;
-  flex-direction: column; 
-}
+  <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>NEWLIFE BLOG</b></h1>
+    <h6>Welcome to the blog of <span class="w3-tag">Newlife SDA Church</span></h6>
+  </header>
 
-.info .thumb { flex-grow: 1; }
-.info .title {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-grow: .02;
-  background: #fff;
-}
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/newlifechurch.png?alt=media&token=385a9311-84fa-43cc-b864-13d2e52130c2" alt="Fashion Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <h1 class="w3-text-white">Newlife</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Church Blog</b></h1>
+      <h6><button class="w3-button w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
+    </div>
+  </header>
 
-.info .title i { font-size: 22px; color: #888; }
-.info .title h3 > * { display: block; }
-.info .title h3 { text-align: center; font-weight: 500; }
-.info .title h3 span { margin-bottom: 5px; }
-.info .title h3 small { font-size: 14px; font-weight: 400; }
+  <!-- Grid -->
+  <div class="w3-row w3-padding w3-border">
 
-.detail i.close { 
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  color: #fff;
-  font-size: 24px;
-  text-shadow: 1px 1px 5px #444;
-  transition: text-shadow .4s ease;
-  cursor: pointer;
-  z-index: 100;
-}
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+    
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>New Year 2020</h3>
+          <h5>Worship and Thanksgiving Service, <span class="w3-opacity">Jan 1, 2020</span></h5>
+        </div>
 
-.detail i.close:hover { 
-  text-shadow: 1px 1px 2px #888; 
-  transition: text-shadow .4s ease; 
-}
-
-.info {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.slider {
-  position: relative;
-  /*width: 300%;*/
-  /*height: 100%;*/
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
-  transition: -webkit-transform 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
-  transition: transform 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
-  transition: transform 0.6s cubic-bezier(0.51, 0.92, 0.24, 1), -webkit-transform 0.6s cubic-bezier(0.51, 0.92, 0.24, 1);
-  will-change: transform;
-}
-
-.slider .slide { display: none; float: left; }
-.slider .slide:nth-child(1) { display: flex !important; }
-
-/** Pure Css Slider **/
-.slider { width: calc(365px * 6); }
-.slider .slide { 
-  display: flex; 
-  width: 365px; 
-}
-
-.slider .slide .thumb {
-  height: 365px;
-  position: relative; 
-  /*background-color: rgba(0,0,0,.4);*/
-  transition: transform 0.6s cubic-bezier(0.51, 0.92, 0.24, 1); 
-}
-
-.slider .slide .thumb > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(50% + 1px);
-  background-size: cover;
-  transition: transform 0.4s cubic-bezier(0.51, 0.92, 0.24, 1);
-}
-
-.slider .slide .thumb > div:first-child { background-position: top left }
-.slider .slide .thumb > div:last-child { background-position: bottom left; top: 50%; }
-
-.slide .thumb.skewLeft > div { transition: all 0.6s cubic-bezier(0.51, 0.92, 0.24, 1); }
-.slide .thumb.skewLeft > div:first-child { transform: skew(-3deg) translateX(-8px);}
-.slide .thumb.skewLeft > div:last-child { transform: skew(3deg) translateX(-8px);}
-
-.slide .thumb.skewRight > div { transition: all 0.6s cubic-bezier(0.51, 0.92, 0.24, 1); }
-.slide .thumb.skewRight > div:first-child { transform: skew(3deg) translateX(8px);}
-.slide .thumb.skewRight > div:last-child { transform: skew(-3deg) translateX(8px);}
-
-.wrapper[data-pos="0"] .slider {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-.wrapper[data-pos="1"] .slider {
-  -webkit-transform: translateX(-365px);
-          transform: translateX(-365px);
-}
-.wrapper[data-pos="2"] .slider {
-  -webkit-transform: translateX(-730px);
-          transform: translateX(-730px);
-}
-.wrapper[data-pos="3"] .slider {
-  -webkit-transform: translateX(-1095px);
-          transform: translateX(-1095px);
-}
-.wrapper[data-pos="4"] .slider {
-  -webkit-transform: translateX(-1460px);
-          transform: translateX(-1460px);
-}
-.wrapper[data-pos="5"] .slider {
-  -webkit-transform: translateX(-1825px);
-          transform: translateX(-1825px);
-}
-
-.wrapper[data-pos="0"] .player-indicator,
-.wrapper[data-pos="0"] .player .track .bar,
-.wrapper[data-pos="0"] .player .track .bar:before,
-.wrapper[data-pos="0"] .player .playbtn {
-  background-color: rgba(0, 150, 136, 1);
-  transition: all .4s ease-in-out;
-}
-.wrapper[data-pos="1"] .player-indicator,
-.wrapper[data-pos="1"] .player .track .bar,
-.wrapper[data-pos="1"] .player .track .bar:before,
-.wrapper[data-pos="1"] .player .playbtn {
-  background-color: rgba(63, 81, 181, 1);
-  transition: all .4s ease-in-out;
-}
-.wrapper[data-pos="2"] .player-indicator,
-.wrapper[data-pos="2"] .player .track .bar,
-.wrapper[data-pos="2"] .player .track .bar:before,
-.wrapper[data-pos="2"] .player .playbtn {
-  background-color: rgba(96, 125, 139, 1);
-  transition: all .4s ease-in-out;
-}
-.wrapper[data-pos="3"] .player-indicator,
-.wrapper[data-pos="3"] .player .track .bar,
-.wrapper[data-pos="3"] .player .track .bar:before,
-.wrapper[data-pos="3"] .player .playbtn {
-  background-color: rgba(90, 71, 46, 1);
-  transition: all .4s ease-in-out;
-}
-.wrapper[data-pos="4"] .player-indicator,
-.wrapper[data-pos="4"] .player .track .bar,
-.wrapper[data-pos="4"] .player .track .bar:before,
-.wrapper[data-pos="4"] .player .playbtn {
-  background-color: rgba(238, 119, 51, 1);
-  transition: all .4s ease-in-out;
-}
-.wrapper[data-pos="5"] .player-indicator,
-.wrapper[data-pos="5"] .player .track .bar,
-.wrapper[data-pos="5"] .player .track .bar:before,
-.wrapper[data-pos="5"] .player .playbtn {
-  background-color: rgba(244, 67, 54, 1);
-  transition: all .4s ease-in-out;
-}
-
-.wrapper[data-pos="0"] .player .track .progress {
-  background-color: rgba(0, 150, 136, .3);
-}
-.wrapper[data-pos="1"] .player .track .progress {
-  background-color: rgba(63, 81, 181, .3);
-}
-.wrapper[data-pos="2"] .player .track .progress {
-  /*background-color: rgba(136, 34, 221, .3);*/
-  background-color: rgba(96, 125, 139, .3);
-}
-.wrapper[data-pos="3"] .player .track .progress {
-  background-color: rgba(90, 71, 46, .3);
-}
-.wrapper[data-pos="4"] .player .track .progress {
-  background-color: rgba(238, 119, 51, .3);
-}
-.wrapper[data-pos="5"] .player .track .progress {
-  background-color: rgba(244, 67, 54, .3);
-}
-
-.playbtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  background: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.playbtn span {
-  display: block;
-  margin-left: 5px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 0 10px 20px;
-  border-color: transparent transparent transparent #fff;
-  transition: all .5s ease;
-}
-
-.playbtn.pause span{
-  margin-left: -10px;
-  width: 7px;
-  height:20px;
-  border-width: 0;
-  background-color: #fff;
-  transition: all .5s ease;
-}
-
-.playbtn span:before {
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  position: relative;
-  left: 12px;
-  background-color: #fff;
-}
-.playbtn.pause span:before {
-  width: 7px;
-  height: 20px;
-}
-
-
-.analyser {
-  width: 100%;
-  height: 24px;
-}
-
-.player-indicator {
-  display: none;
-  position: absolute;
-  right: 15px;
-  top: 75px;
-
-  cursor: pointer;
-  transition: top .4s ease;
-}
-
-.player-indicator .playb {
-  padding: 9px 6px 7px 10px;
-  color: white;
-}
-
-.player-indicator .bars {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 36px;
-  height: 32px;
-  margin: 2px 0;
-}
-
-.player-indicator .bars div {
-  display: flex;
-  align-items: flex-end;
-  width: 5px;
-  margin-left: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-  height: 100%;
-}
-
-.player-indicator .bars div:before { 
-  content: "";
-  display: block;
-  width: 100%;
-  background-color: rgba(137, 255, 0, 0.5);
-  /*background: linear-gradient(to bottom, #2196F3 0%, #89ff00 70%, #FFEB3B 100%);*/
-  animation: animate_height 1s ease-in-out infinite;
-}
-
-.player-indicator .bars div:nth-child(2):before { animation-delay: .5s; animation-timing-function: ease-out; }
-.player-indicator .bars div:nth-child(3):before { animation-delay: .2s; animation-timing-function: ease-in; }
-.player-indicator .bars div:nth-child(4):before { animation-delay: .4s; }
-.player-indicator .bars div:nth-child(5):before { animation-delay: .1s; }
-
-.wrapper.playing .player-indicator,
-.wrapper.paused .player-indicator {
-  display: flex;
-} 
-
-.wrapper.paused .player-indicator .bars div:before {
-  height: 0;
-  animation: none;
-}
-
-.wrapper.paused .player-indicator .playb:before {
-  content: "►";
-  display: block;
-}
-
-.wrapper.playing .player-indicator .playb:before {
-  content: "❚❚";
-  display: block;
-  position: relative;
-  left: -1px;
-}
-
-@keyframes animate_height {
-  0% { height: 5% }
-  50% { height: 95% }
-  100% { height: 20% }
-}
-
-.wrapper[data-pos="0"] .player-indicator { top: 78px; }
-.wrapper[data-pos="1"] .player-indicator { top: calc(76px + 1 * 91px); }
-.wrapper[data-pos="2"] .player-indicator { top: calc(75px + 2 * 91px); }
-.wrapper[data-pos="3"] .player-indicator { top: calc(75px + 3 * 90px); }
-.wrapper[data-pos="4"] .player-indicator { top: calc(74px + 4 * 90px); }
-.wrapper[data-pos="5"] .player-indicator { top: calc(73px + 5 * 90px); }</style></head><body>
-<div class="wrapper" data-pos="0">
-
-      <div class="list">
-        <div class="player-indicator">
-          <div class="playb"></div>
-          <div class="bars">
-            <div></div><div></div><div></div><div></div><div></div>
+        <div class="w3-justify">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/nwyear.png?alt=media&token=5487ddf1-efb7-4fb6-a702-db68669b578f" alt="Church Blog" style="width:100%" class="w3-padding-16">
+          <p><strong>Happy New Year 2020!</strong> Come let us start the new year 2020 together in the presence of the Lord.</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
+          <p class="w3-clear"></p>
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Kibet Ronoh Josphat <span class="w3-opacity w3-medium">Jan 1, 2020, 7:32 AM</span></h4>
+                <p>Happy new year brethren</p>
+              </div>
           </div>
         </div>
-        <header>
-          <div><i class="zmdi zmdi-arrow-left"></i></div>
-          <h3>Sermons</h3>
-          <div><i class="zmdi zmdi-more-vert"></i></div>
-        </header>
-        <section></section>
+      </div>
+      <hr>
+
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>BIBLE STUDY</h3>
+          <h5>Elisha and Naaman, <span class="w3-opacity">Dec 31, 2019</span></h5>
+        </div>
+
+        <div class="w3-justify">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/gless03.jpg?alt=media&token=ee476eaa-b259-41a7-a943-d651ced7aaba" alt="Church Blog" style="width:100%" class="w3-padding-16">
+          <p><strong>Yes, these steps look easy. Easy enough to set aside for “later.” Easy enough to think that maybe they're not so important, or not so special. But that would be a mistake.</strong> The Bible tells the story of Naaman, the commander of the Syrian army. He contracted leprosy which was incurable and terminal. One of his slaves, an Israelite, suggested that he go to Samaria, where the prophet Elisha would be able to heal him.</p>
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo2')"><b>READ MORE »  </b> <span class="w3-tag w3-white">2</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          
+                        
+              
+          <div id="demo2" style="display:none">
+            <div class="w3-row">
+              <hr>
+              
+               <p>Elisha told Naaman to go wash himself in the river Jordan, and to immerse himself seven times if he wanted to be healed. Naaman was insulted. That river was muddy and it was unacceptable for a high official to bath in it.</p>
+
+               <p>He was about to leave in a rage when one of his soldiers pointed out that if Elisha had asked him to do something great and difficult, he would have followed instructions without question. Yes, the instructions to dunk himself in the Jordan were simple, but what did he have to lose?</p>
+
+               <p><strong>"Yes, the instructions to dunk himself in the Jordan were simple, but what did he have to lose?"</strong></p>
+
+               <p>Naaman accepted the counsel, followed Elisha's instructions and was healed. (2 Kings 5:1-15)</p>
+
+               <p>Just like Naaman, you are free to choose your course of action. You can continue struggling with your troubles, drifting through life without meaning or purpose, and missing out on a journey that will bring you eternal life. Or, you can follow the simple steps on this page. The choice is yours.</p>
+
+
+               <p></p>
+
+               <p></p>
+
+               
+               
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+
+              
+                <h4>Amber <span class="w3-opacity w3-medium">Dec 31, 2019, 10:52 PM</span></h4>
+                <p>Amen.</p><br>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Angie <span class="w3-opacity w3-medium">Dec 31, 2019, 9:12 PM</span></h4>
+                <p>Amen!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="detail">
-        <div class="info">
-          <i class="zmdi zmdi-close close"></i>
-          <div class="slider">
-            <!-- slides here -->
-          </div>
+      <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>Special Message</h3>
+          <h5>The Gift of Jesus Christ, <span class="w3-opacity">Dec ,30 2019</span></h5>
         </div>
-        <div class="player">
-          <div class="controls">
-            <i class="zmdi zmdi-shuffle"></i>
-            <i class="zmdi zmdi-fast-rewind"></i>
-            <div class="playbtn"><span></span></div>
-            <i class="zmdi zmdi-fast-forward"></i>
-            <i class="zmdi zmdi-replay"></i>
-          </div>
-          <div class="track">
-            <audio class="audio" preload="true"></audio>
-            <canvas class="analyser"></canvas>
-            <div class="progress">
-              <div class="bar"></div>
+
+        <div class="w3-justify">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/image3.jpg?alt=media&token=4395b0fb-8d40-4415-9758-489bae9a0c82" alt="Runway" style="width:100%" class="w3-padding-16">
+          
+          <p>As we come to the close of another year, I would like to invite you for a moment to consider the most amazing gift of Jesus Christ. While we do not know exactly when He was born, the important thing is that we know for certain He was born, and that He came to this Earth on a very special mission.<p>
+          
+          
+          <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>READ MORE »  </b> <span class="w3-tag w3-white">3</span></button></p>
+          <p class="w3-clear"></p>
+          
+          <!-- Example of comment field -->
+          <div id="demo3" style="display:none">
+            <hr>
+            
+               <p>Foretold by prophecy and announced by a heavenly being more than 2,000 years ago, we read in Matthew 1:21—“And she [Mary] will bring forth a Son, and you shall call His name Jesus, for He will save His people from their sins.”</p>
+               
+               <p>Oh, what a wonderful gift from heaven itself—God Himself—“Emmanuel,” came to dwell with us—to live, and teach, and heal, and die—to save us from our sins and to restore us to His likeness! </p>
+               
+               <p>Praise God He lives and is coming back soon—this time to take us to live with Him forever. Oh, what a day that will be—all made possible by the One who willingly humbled Himself, was born in a manger and died on a cross to save you and me.</p>
+               
+               <p>Let us pause for a moment as we consider the profound words of the angel, recorded in Luke, chapter 2:</p>
+               
+               <p>“Do not be afraid, for behold, I bring you good tidings of great joy which will be to all people. For there is born to you this day in the city of David a Savior, who is Christ the Lord. And this will be the sign to you: You will find a Babe wrapped in swaddling cloths, lying in a manger.”</p>
+               
+               <p>“And suddenly there was with the angel a multitude of the heavenly host praising God and saying: ‘Glory to God in the highest, And on earth peace, goodwill toward men’” (vss. 10-14)</p>
+               
+               <p>May the joy of His birth, the peace of His presence, and the hope of His soon return fill your heart with the Gift of His immeasurable love.</p>
+               
+               <p>Maranatha!</p>
+               
+        
+
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Jane <span class="w3-opacity w3-medium">Dec ,30 2019, 7:22 PM</span></h4>
+                <p>That was a powerful message. Be Blessed.</p>
+              </div>
             </div>
-            <div class="counter"><span class="begin">0:00</span><span class="end">0:00</span></div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>John <span class="w3-opacity w3-medium">Dec ,30 2019, 10:32 PM</span></h4>
+                <p>Keep up the GREAT work! I am Blessed.</p>
+              </div>
+            </div>
+            <div class="w3-row w3-margin-bottom">
+              <div class="w3-col l2 m3">
+                <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" style="width:90px;">
+              </div>
+              <div class="w3-col l10 m9">
+                <h4>Anja <span class="w3-opacity w3-medium">Dec ,30 2019, 9:12 PM</span></h4>
+                <p>Wonderful message.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       
+    <!-- END BLOG ENTRIES -->
     </div>
-<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdn.jsdelivr.net/domtastic/0.12/domtastic.min.js'></script><script src='https://hammerjs.github.io/dist/hammer.min.js'></script>
-<script>var Player = function(containerSelector, opts) {
-	this.$container = document.querySelector(containerSelector);
-	this.$audioEl = this.$container.querySelector('.audio');
-	this.$timeline = this.$container.querySelector('.progress');
-	this.$playbtn = this.$container.querySelector('.playbtn');
-	
-	this.duration = 0;
-	this.timelineWidth = 0;
-	this.currentTrack = 0;
-	this.playerState = 'stop';
-	this.$audioEl.crossOrigin = "anonymous";
-  this.$audioEl.volume = 0.15;
-	this.tracks = opts.tracks;
 
-	this.$audioEl.addEventListener("timeupdate", this.timeUpdate.bind(this), false);
-	this.$playbtn.addEventListener("click", this.play.bind(this), false);
+    <!-- About/Information menu -->
+    <div class="w3-col l4">
+      <!-- About Card -->
+      <div class="w3-white w3-margin">
+        <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale">
+        <div class="w3-container w3-black">
+          <h4>Newlife SDA Church<h4> 
+          <p>Newlife SDA Church,
+5th Ngong Avenue, P.O. Box 40829 - 00100 Nairobi, Kenya
++254 (795) 638070
++254 721 167 150 (Sis. Naomi Mayaka - Church Secretary)
+info@newlifesdanairobi.org.</p>
+        </div>
+      </div>
+      <hr>
 
-	this.$audioEl.addEventListener("canplaythrough", () => { this.duration = this.$audioEl.duration; }, false);
-	this.$timeline.addEventListener("click", (e) => {
-		var skipTo = e.offsetX / this.timelineWidth;
-		this.$audioEl.currentTime = this.duration * skipTo;
-	});
+      <!-- Posts -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Popular Posts</h4>
+        </div>
+        <ul class="w3-ul w3-hoverable w3-white">
+          <li class="w3-padding-16">
+            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Newlife</span>
+            <br>
+            <span>Happy New Year</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Newlife</span>
+            <br>
+            <span>Happy New Year</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Newlife</span>
+            <br>
+            <span>Happy New Year</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/logo.png?alt=media&token=bf313f86-2828-48c2-9433-a2dfec8a70b3" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+            <span class="w3-large">Newlife</span>
+            <br>
+            <span>Happy New Year</span>
+          </li>
+        </ul>
+      </div>
+      <hr>
 
-	this.analyserInitialized = false;
+      <!-- Advertising -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Advertise</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale">
+          </div>
+        </div>
+      </div>
+      <hr>
 
-}
+      <!-- Tags -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Tags</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>
+            <span class="w3-tag w3-black w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Newlife</span>
+          </p>
+        </div>
+      </div>
+      <hr>
 
-Player.prototype.play = function() {
-	this.timelineWidth = this.$timeline.offsetWidth;
-	
-	if (this.$audioEl.paused) {
-		this.$audioEl.play();
-		// remove play, add pause
-		this.$playbtn.className = "playbtn pause";
-		this.setPlayerState('play');
-	} else { // pause audio
-		this.$audioEl.pause();
-		// remove pause, add play
-		this.$playbtn.className = "playbtn";
-		this.setPlayerState('pause');
-	}
+      <!-- Inspiration -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Inspiration</h4>
+        </div>
+        <div class="w3-row-padding w3-white">
+          <div class="w3-col s6">
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
+          </div>
+          <div class="w3-col s6">
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%" class="w3-grayscale"></p>
+            <p><img src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/background-pictures-8.jpg?alt=media&token=34bca76e-3447-4a02-9642-a20fcd015324" alt="Newlife" style="width:100%"></p>
+         </div>
+        </div>
+      </div>
+      <hr>
 
-	setTimeout(()=>{
-		this.$container.querySelector('.end').innerText = this.formatTime(this.$audioEl.duration);
-		this.duration = this.$audioEl.duration;
-	}, 1000);
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Follow Us</h4>
+        </div>
+        <div class="w3-container w3-xlarge w3-padding">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+      </div>
+      <hr>
+      
+      <!-- Subscribe -->
+      <div class="w3-white w3-margin">
+        <div class="w3-container w3-padding w3-black">
+          <h4>Subscribe</h4>
+        </div>
+        <div class="w3-container w3-white">
+          <p>Enter your e-mail below and get notified on the latest blog posts.</p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+          <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button></p>
+        </div>
+      </div>
 
-	// check for the analyser
-	if(!this.analyserInitialized) {
-		this.setupAnalyser();
-		this.analyserInitialized = true;
-	}
+    <!-- END About/Intro Menu -->
+    </div>
 
-	// color references for analyser bars
-	this.barBG = this.getBgColor(this.$timeline);
-	this.barFG = this.getBgColor(this.$timeline.querySelector('.bar'));
-}
+  <!-- END GRID -->
+  </div>
 
-Player.prototype.timeUpdate = function() {
-	var playPercent = 
-		(this.$audioEl.duration == 'Infinity')? 100 
-		: this.$audioEl.currentTime * 100 / this.$audioEl.duration;
+<!-- END w3-content -->
+</div>
 
-	this.setTimeline(playPercent, this.$audioEl.currentTime);
+<!-- Subscribe Modal -->
+<div id="subscribe" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
 
-	if (playPercent > 99.9) {
-		this.$playbtn.className = "playbtn";
-		this.setPlayerState('stop');
-	}
-}
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey" style="padding:32px">
+  <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
 
-Player.prototype.changeTrack = function(index, autoplay) {
-	//Stopping the download of media
-	this.$audioEl.removeAttribute("src");
-	this.$audioEl.load();
-
-	this.currentTrack = index;
-	this.$audioEl.setAttribute("src", this.tracks[index].src);
-	this.$audioEl.load();
-
-	setTimeout(()=>{
-		this.setTimeline(0, 0, this.$audioEl.duration);
-		if(autoplay){
-			this.play();
-		}
-	}, 400);
-}
-
-Player.prototype.setTimeline = function(playPercent, elapsed, duration) {
-	var _playPercent = (playPercent > 99)? playPercent - 1 : playPercent,
-		_elapsed = elapsed || this.$audioEl.currentTime;
-
-	this.$timeline.querySelector('.bar').style.width = _playPercent + "%";
-	this.$container.querySelector('.begin').innerText = this.formatTime(_elapsed);
-
-	if(duration)
-		this.$container.querySelector('.end').innerText = this.formatTime(duration);
-
-}
-
-Player.prototype.setPlayerState = function(state) {
-	var evt = new CustomEvent('playerStateChanged', {'detail': state});
-	this.playerState = state;
-	this.$container.dispatchEvent(evt);
-}
-
-Player.prototype.formatTime = function(seconds) {
-	minutes = Math.floor(seconds / 60);
-    minutes = (minutes >= 10) ? minutes : "" + minutes;
-    seconds = Math.floor(seconds % 60);
-    seconds = (seconds >= 10) ? seconds : "0" + seconds;
-    return minutes + ":" + seconds;
-}
-
-// http://www.developphp.com/video/JavaScript/Analyser-Bars-Animation-HTML-Audio-API-Tutorial
-Player.prototype.setupAnalyser = function() {
-	this.$canvas = this.$container.querySelector('.analyser');
-	this.ctx = this.$canvas.getContext('2d');
-	this.audioContext = new AudioContext() || new webkitAudioContext();
-	this.analyser = this.audioContext.createAnalyser();
-
-	var source = this.audioContext.createMediaElementSource(this.$audioEl);
-	source.connect(this.analyser);
-	this.analyser.connect(this.audioContext.destination);
-	this.frameLooper();
-}
-
-Player.prototype.frameLooper = function() {
-	window.requestAnimationFrame(this.frameLooper.bind(this));
-	var fbc_array = new Uint8Array(this.analyser.frequencyBinCount);
-	var bars = 75;
-	var currentPercent = parseInt(this.$audioEl.currentTime*bars/this.$audioEl.duration);
-
-	this.analyser.getByteFrequencyData(fbc_array);
-	this.ctx.clearRect(0, 0, this.$canvas.width, this.$canvas.height); // Clear the canvas
-	this.ctx.fillStyle = this.barFG; // Color of the bars
-	
-	for (var i = 0; i < bars; i++) {
-		if(i > currentPercent)
-			this.ctx.fillStyle = this.barBG;
-
-		bar_x = i * 4;
-		bar_width = 3.5;
-		bar_height = -(fbc_array[i] / 2);
-		this.ctx.fillRect(bar_x, this.$canvas.height, bar_width, bar_height);
-	}
-}
-
-// https://permadi.com/tutorial/cssGettingBackgroundColor/index.html
-Player.prototype.getBgColor = function(element) 
-{
-  if (element.currentStyle)
-    return element.currentStyle.backgroundColor;
-  if (window.getComputedStyle)
-  {
-    var elementStyle=window.getComputedStyle(element,"");
-    if (elementStyle)
-      return elementStyle.getPropertyValue("background-color");
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
   }
-  // Return 0 if both methods failed.  
-  return 0;
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Liked";
 }
 </script>
-<script >"use strict";
 
-/** https://github.com/emoreno911/UI-to-Code/tree/master/material_music **/
-/*** In the player view Swipe left or right to change the current song ***/
-var listItems = [],
-    detailItems = [],
-    playlist = [{ "time": "178", "title": "Snowflake - Living Nightmare", "img": "https://dl.dropbox.com/s/wacl6yr2b32sqds/snowflake.jpg", "src": "https://dl.dropbox.com/s/4ef8ana3rsm7sdu/snowflake.mp3" }, { "time": "124", "title": "Bensound - Dubstep", "img": "https://dl.dropbox.com/s/7a1psxm2i4m644k/dubstep2.jpg", "src": "https://dl.dropbox.com/s/ebsjr0uq9zfg9x0/dubstep.mp3" }, { "time": "78", "title": "Secret Of Life - 42", "img": "https://dl.dropbox.com/s/z1j07kiqo9r2mj9/track3.jpeg", "src": "https://dl.dropbox.com/s/goyhvi2np0mov5n/track3.mp3" }, { "time": "216", "title": "Bensound - Retrosoul", "img": "https://dl.dropbox.com/s/e2b9l3cbjy4wthw/retrosoul.jpg", "src": "https://dl.dropbox.com/s/lfc7z6kz2q1k2vo/retrosoul.mp3" }, { "time": "175", "title": "Snowflake - Holiday Funky Blues", "img": "https://dl.dropbox.com/s/myu3b9qtf74sz3i/snowflake2.jpg", "src": "https://dl.dropbox.com/s/kwy27cjasc6yodw/snowflake3.mp3" }, { "time": "105", "title": "Bensound - Happy Rock", "img": "https://dl.dropbox.com/s/fz8452movdjnfe8/happyrock.jpg", "src": "https://dl.dropbox.com/s/03abwi15hveg4yj/happyrock.mp3" }];
-
-playlist.forEach(function (el, i) {
-  var _el$title$split = el.title.split('-');
-
-  var artist = _el$title$split[0];
-  var title = _el$title$split[1];
-
-  var top = 66 * (i + 1) + i * 22;
-  var z = i + 1;
-
-  var itemList = "<div class=\"list-item\" data-index=\"" + i + "\">\n        <div class=\"thumb\">\n        \t<img src=\"" + el.img + "\" alt=\"song_title\" style=\"top: " + top + "px\">\n        </div>\n        <div class=\"title\">\n          <span>" + title + "</span>\n          <small>" + artist + "</small>\n        </div>\n        <div class=\"length\"><small>" + (formatTime(el.time) || "0:00") + "</small></div>\n      </div>";
-
-  var itemDetail = "<div class=\"slide\">\n      <div class=\"thumb\">\n        <div style=\"background-image:url(" + el.img + ")\"></div>\n        <div style=\"background-image:url(" + el.img + ")\"></div>\n      </div>\n      <div class=\"title\">\n        <i class=\"zmdi zmdi-minus-circle-outline\"></i>\n        <h3><span>" + title + "</span><small>" + artist + "</small></h3>\n        <i class=\"zmdi zmdi-favorite-outline\"></i>\n      </div>\n    </div>";
-
-  listItems.push(itemList);
-  detailItems.push(itemDetail);
-});
-
-document.querySelector('.list section').innerHTML = listItems.join('');
-document.querySelector('.detail .slider').innerHTML = detailItems.join('');
-
-var positionElement = document.querySelector('.wrapper'),
-    sliderElement = document.querySelector('.slider');
-
-var $listItemImg = $('.list-item img'),
-    $detail = $('.detail');
-
-var _player = new Player('.player', { tracks: playlist });
-_player.$container.addEventListener('playerStateChanged', function (evt) {
-  //console.log('player changed to ' + evt.detail);
-  var $wrapper = $('.wrapper');
-
-  if (evt.detail == 'play') $wrapper.removeClass('paused').addClass('playing');else if (evt.detail == 'pause') $wrapper.removeClass('playing').addClass('paused');else $wrapper.removeClass('paused').removeClass('playing');
-}, false);
-
-$('.player-indicator .playb').on('click', function (evt) {
-  _player.play();
-});
-
-$('.list-item').on('click', function (evt) {
-  // select the current detail item
-  var $this = $(this),
-      index = this.getAttribute('data-index');
-
-  positionElement.setAttribute('data-pos', index);
-  currentSlide = parseInt(index);
-
-  $this.find('img').addClass('open');
-  $detail.addClass('open');
-  setTimeout(function () {
-    $detail.addClass('ready');
-
-    if (_player.currentTrack != currentSlide) _player.changeTrack(currentSlide, true);
-  }, 300);
-});
-
-$('.detail .close').on('click', function (evt) {
-  $listItemImg.removeClass('open');
-  $detail.addClass('lock');
-
-  setTimeout(function () {
-    $detail.removeClass('ready lock open');
-  }, 250);
-});
-
-$('.controls .zmdi-fast-rewind').on('click', prev);
-$('.controls .zmdi-fast-forward').on('click', next);
-
-var slideCount = 6,
-    step = 5,
-    maxSpan = 100,
-    currentSpan = 0,
-    currentSlide = 0;
-
-var hammertime = new Hammer(sliderElement);
-hammertime.on("panleft panright panstart panend", function (evt) {
-
-  if (evt.type == 'panleft') {
-    currentSpan += step;
-
-    if (currentSpan > maxSpan) next();
-  }
-
-  if (evt.type == 'panright') {
-    currentSpan -= step;
-
-    if (currentSpan < -(maxSpan + 20)) prev();
-  }
-
-  // pull the borders
-  if (evt.type == 'panstart' && evt.additionalEvent == 'panleft') {
-    var s = currentSlide + 1;
-    $('.slide:nth-child(' + s + ') .thumb').addClass('skewLeft');
-  }
-
-  if (evt.type == 'panstart' && evt.additionalEvent == 'panright') {
-    var s = currentSlide + 1;
-    $('.slide:nth-child(' + s + ') .thumb').addClass('skewRight');
-  }
-
-  if (evt.type == 'panend') {
-    $('.thumb').removeClass('skewLeft skewRight');
-    currentSpan = 0;
-  }
-});
-
-function next() {
-  var slide = parseInt(positionElement.getAttribute('data-pos')),
-      newSlide = slide + 1 > slideCount - 1 ? slide : slide + 1;
-  positionElement.setAttribute('data-pos', newSlide);
-  currentSlide = newSlide;
-  currentSpan = 0;
-  _player.changeTrack(currentSlide, true);
-  // sync the selected list item with the current detail item
-  $listItemImg.removeClass('open').eq(currentSlide).addClass('open');
-}
-
-function prev() {
-  var slide = parseInt(positionElement.getAttribute('data-pos')),
-      newSlide = slide - 1 < 0 ? slide : slide - 1;
-  positionElement.setAttribute('data-pos', newSlide);
-  currentSlide = newSlide;
-  currentSpan = 0;
-  _player.changeTrack(currentSlide, true);
-  // sync the selected list item with the current detail item
-  $listItemImg.removeClass('open').eq(currentSlide).addClass('open');
-}
-
-function formatTime(seconds) {
-  var minutes = Math.floor(seconds / 60);
-  minutes = minutes >= 10 ? minutes : "" + minutes;
-  seconds = Math.floor(seconds % 60);
-  seconds = seconds >= 10 ? seconds : "0" + seconds;
-  return minutes + ":" + seconds;
-}
-//# sourceURL=pen.js
-</script>
-</body></html>
+</body>
+</html>
