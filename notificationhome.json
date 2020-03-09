@@ -1,5 +1,23 @@
 [
         {
+        "id": "8",
+        "firstname": "Music Sabbath.",
+        "jobprofile": "Newlife SDA Church invites you to our Music Sabbath on the 14th of  March 2020 at Newlife SDA Church 5th Ngong Avenue. Theme is REJOICE, HE IS KING.",
+        "lastname": "9-MAR-2020"
+
+	},{
+        "id": "7",
+        "firstname": "TMI 2020",
+        "jobprofile": "Hope Channel Kenya (HCK) 2020 Evangelistic Campaign from 21st-5th April 2020, Guest Speaker: Pastor Victor Banda. ",
+        "lastname": "9-MAR-2020"
+
+	},{
+        "id": "6",
+        "firstname": "UPDATE",
+        "jobprofile": "New Update available on google play store.",
+        "lastname": "9-MAR-2020"
+
+	},{
         "id": "5",
         "firstname": "Newlife Singspiration",
         "jobprofile": "All are invited to our Singspiration this Friday 31-JAN-2020 from 5:30pm - 7:00pm EAT.",
@@ -19,14 +37,14 @@
 
 	},{
         "id": "2",
-        "firstname": "Insuarance Cover",
-        "jobprofile": "Apply today to get your new smartphone covered by our Insuarance",
+        "firstname": "UPDATE",
+        "jobprofile": "New Update available on google play store.",
         "lastname": "05-JAN-2020"
 
 	},{
         "id": "1",
-        "firstname": "Donation",
-        "jobprofile": "Happy with what you are seeing? well, you can support us using the support page",
+        "firstname": "UPDATE",
+        "jobprofile": "New Update available on google play store.",
         "lastname": "01-JAN-2020"
 
 	}
