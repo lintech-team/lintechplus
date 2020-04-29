@@ -1,21 +1,15 @@
-<!DOCTYPE html> 
-<html> 
-<body> 
+<!DOCTYPE html>
+<html>
+<body>
 
+<h1>The a download attribute</h1>
 
-<video id="myVideo" width="320" height="176" controls>
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/walking%20on%20the.mp4?alt=media&token=00205507-aaf8-4ef9-b456-a635b5cea113" type="video/mp4">
-  <source src="https://firebasestorage.googleapis.com/v0/b/newlife-ll.appspot.com/o/walking%20on%20the.mp4?alt=media&token=00205507-aaf8-4ef9-b456-a635b5cea113" type="video/ogg">
-  Your browser does not support HTML5 video.
-</video>
+<p>Click on the image to download it:<p>
+<a href="/images/myw3schoolsimage.jpg" download>
+  <img src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
+</a>
 
-<script>
-var vid = document.getElementById("myVideo");
-vid.onplay = function() {
-  alert("The video has started to play");
-};
-</script> 
+<p><b>Note:</b> The download attribute is not supported in IE or Edge (prior version 18), or in Safari (prior version 10.1).</p>
 
-
-</body> 
+</body>
 </html>
