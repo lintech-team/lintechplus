@@ -1,5 +1,29 @@
 [
   {
+		"day": "Sunday",
+		"date": "27",
+		"month": "March",
+		"time": "7:30pm - 9:00pm EAT",
+		"venue": "Virtual",
+		"title": "Day 1: The Naked Truth",
+		"desc": "Newlife SDA Youth Ministry is inviting you to a scheduled Yoom Week of Prayer. \n\n\n Topic: Newlife Youth Week of Prayer Time: This is a recurring meeting Meet anytime\n Meeting ID: 876 9773 0440 Passcode: YWOP22 	Dates: 27th March to 2nd April 2022.     Time: 7:30pm - 9:00pm     Speaker: Jackline Saeta",
+		"amt": "Free To Join",
+		"stream": "Live Stream Available",		
+		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/ywopd1.jpeg?alt=media&token=f4011bd8-73f5-49a8-afd4-8d5bc024dd41"
+	 
+	},{
+		"day": "Sun - Sat",
+		"date": "27 - 2",
+		"month": "March - April",
+		"time": "7:30pm - 9:00pm EAT",
+		"venue": "Virtual",
+		"title": "The Present Truth ",
+		"desc": "Newlife SDA Youth Ministry is inviting you to a scheduled Yoom Week of Prayer. \n\n\n Topic: Newlife Youth Week of Prayer Time: This is a recurring meeting Meet anytime\n Meeting ID: 876 9773 0440 Passcode: YWOP22 	Dates: 27th March to 2nd April 2022.     Time: 7:30pm - 9:00pm     Speaker: Jackline Saeta",
+		"amt": "Free To Join",
+		"stream": "Live Stream Available",		
+		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/ywop.jpeg?alt=media&token=4bc98b2c-f1ff-4d5f-a8d4-163302220e6b"
+	 
+	},{
 		"day": "Thur-Mon",
 		"date": "14 - 18",
 		"month": "April 2022",
@@ -10,187 +34,6 @@
 		"amt": "Ksh 7500",
 		"stream": "Live Stream Not Available",		
 		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/WhatsApp%20Image%202022-03-08%20at%207.48.54%20PM.jpeg?alt=media&token=ab770a87-d1ed-42aa-abef-c8bd5cccd31d"
-	 
-	},{
-		"day": "Saturday",
-		"date": "12",
-		"month": "March",
-		"time": "8:00am - 5:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Sunday",
-		"date": "13",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Monday",
-		"date": "14",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Tuesday",
-		"date": "15",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Wednesday",
-		"date": "16",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Thursday",
-		"date": "17",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Friday",
-		"date": "18",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Saturday",
-		"date": "19",
-		"month": "March",
-		"time": "8:00am - 5:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Sunday",
-		"date": "20",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Monday",
-		"date": "21",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Tuesday",
-		"date": "22",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Wednesday",
-		"date": "23",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/275043474_2757648411211433_203921214110147197_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=9267fe&_nc_eui2=AeHe4fzEUCfhQHz1z8UzOFnu8b3v5DacoS_xve_kNpyhLybD-_tR7KYUPhwidaVHAOI_iW2QSQ_z1Utp3v2Mqz_B&_nc_ohc=kkCD8AYr4bYAX9I_pXy&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&oh=00_AT9_z5fP25DafOnKLFpuYvu8b--nklq9BTLMdjkzOMLmOg&oe=62385F7B"
-	 
-	},   {
-		"day": "Thursday",
-		"date": "24",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	}
-	,   {
-		"day": "Friday",
-		"date": "25",
-		"month": "March",
-		"time": "5:00PM - 8:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
-	 
-	},   {
-		"day": "Saturday",
-		"date": "26",
-		"month": "March",
-		"time": "8:00am - 5:00pm EAT",
-		"venue": "Newlife SDA Church 5th Ave.",
-		"title": "Jesus Saves Evangelistic Campaign 2022 (I WILL GO) ",
-		"desc": "Welcome to Newlife Evangelistic Campeign",
-		"amt": "Free Entrance",
-		"stream": "Live Stream Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/275043474_2757648411211433_203921214110147197_n.jpg?alt=media&token=9f97b53c-7dac-4c36-80a6-e47974a006c3"
 	 
 	}
 	
