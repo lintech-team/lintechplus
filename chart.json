@@ -23,7 +23,17 @@
   "bar_months":[
   "jan",
   "feb",
-  "mar"
+  "mar",
+   "Apr",
+   "May",
+   "Jun",
+   "Jul",
+   "Aug",
+   "Sep",
+   "Oct",
+   "Nov",
+   "Dec"
+   
 ],
   
   "bar_pending":[
