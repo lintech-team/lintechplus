@@ -1,17 +1,36 @@
 [
   {
-		"day": "Thu - Mon",
-		"date": "14 - 18",
-		"month": "April 2022",
-		"time": "Dep 0:00 EAT",
-		"venue": "Jumuia Beach Resort, Mtwapa",
-		"title": "The Newlife Youth Easter Retreat",
-		"desc": "The Newlife Youth Easter Retreat is finally here and I'm just thinking of the cool evening breeze at the beach! ☀️🌴🌊 \n\nJoin the fun!! 🏄‍♂️🏄‍♀️ \n\nRegistration: Ksh 500 (included in the total cost) \n\nMpesa: Lousa Yogo- 0707082224 \n\nWe encourage you to register early as the registration fee will facilitate early booking of the venue and other logistics ✨\n\n\nSee you all there!! 😃😃\n\n",
-		"amt": "Ksh 7500",
-		"stream": "Live Stream Not Available",		
-		"img": "https://firebasestorage.googleapis.com/v0/b/fir-testapp-f813c.appspot.com/o/WhatsApp%20Image%202022-03-08%20at%207.48.54%20PM.jpeg?alt=media&token=ab770a87-d1ed-42aa-abef-c8bd5cccd31d"
-	 
-	}
-	
-	
+		"day": "Sat - Sat",
+		"date": "20 - 27",
+		"month": "August 2022",
+		"time": "6.00AM - 7.00PM EAT",
+		"venue": "Newlife SDA Church Nairobi",
+		"title": "I WILL GO",
+		"desc": " Proclaim the three Angels Message",
+		"amt": "Free",
+		"stream": "Live Stream Available",		
+		"img": "https://lintech-team.github.io/lintechplus/galo/frame1.jpeg"
+	},{
+		"day": "Sat - Sat",
+		"date": "20 - 27",
+		"month": "August 2022",
+		"time": "6.00AM - 7.00PM EAT",
+		"venue": "Newlife SDA Church Nairobi",
+		"title": "I WILL GO",
+		"desc": " Proclaim the three Angels Message",
+		"amt": "Free",
+		"stream": "Live Stream Available",		
+		"img": "https://lintech-team.github.io/lintechplus/galo/frame2.jpeg"
+	},{
+		"day": "Sat - Sat",
+		"date": "20 - 27",
+		"month": "August 2022",
+		"time": "6.00AM - 7.00PM EAT",
+		"venue": "Newlife SDA Church Nairobi",
+		"title": "I WILL GO",
+		"desc": " Proclaim the three Angels Message",
+		"amt": "Free",
+		"stream": "Live Stream Available",		
+		"img": "https://lintech-team.github.io/lintechplus/galo/frame3.jpeg"
+	}	
 ]
