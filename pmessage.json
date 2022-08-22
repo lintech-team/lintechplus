@@ -1,9 +1,57 @@
 [
-		{
+	{
         "id": "1",
-        "firstname": "Pastoral Message",
-        "jobprofile": "Happy Sabbath saints and welcome to women ministry Sabbath. May we all be blessed. Women should not feel that they are excused because of their domestic cares. They should become intelligent as to how they can work most successfully and methodically in bringing souls to Christ. Women of firm principle and decided character are needed, women who believe that we are indeed living in the last days, and that we have the last solemn message of warning to be given to the world. They should feel that they are engaged in an important work in spreading the rays of light, which Heaven has shed upon them. When the love of God and His truth is an abiding principle, they will let nothing deter them from duty, or iscourage them in their work. They will fear God, and will not be diverted from their labors in His cause by the temptation of lucrative situations and attractive prospects. They will preserve their integrity at any cost to themselves. These are the ones who will correctly represent the religion of Christ, whose words will be fitly spoken, like apples of gold in pictures of silver. Such persons, in many ways can do a precious work for God. He calls upon them to go out into the harvest field, and help gather in the sheaves.",
-        "lastname": "- DG 17.2 Sabbath Shalom"
+        "firstname": "",
+        "jobprofile": "Here is your guide to the Family Life Sessions.",
+        "lastname": ""
+
+	},{
+        "id": "1",
+        "firstname": "Ambassadors",
+        "jobprofile": "Pr. Susan Odidi \n\nMeeting ID : 849 4069 9305 \nPasscode : 18442022",
+        "lastname": "https://bit.ly/Newlife_Ambassadors_Camp"
+
+	},{
+        "id": "1",
+        "firstname": "Senior Youth",
+        "jobprofile": "Pr. Simon Munyao \n\nMeeting ID : 859 4609 8320 \nPasscode : 18442022",
+        "lastname": "https://bit.ly/Newlife_SeniorYouth_Camp"
+
+	},{
+        "id": "1",
+        "firstname": "Young Professionals",
+        "jobprofile": "Pr. Kenneth Karungu \n\nMeeting ID : 814 6644 1864 \nPasscode : 18442022",
+        "lastname": "https://bit.ly/Newlife_AAYP"
+
+	},{
+        "id": "1",
+        "firstname": "Single Parents",
+        "jobprofile": "Sis. Pamela Okeyo \n\nMeeting ID : 890 0492 4250 \nPasscode : 18442022",
+        "lastname": "https://bit.ly/Newlife_Singles"
+
+	},{
+        "id": "1",
+        "firstname": "Married couples 1-10 Years",
+        "jobprofile": "Pr. Nicanor Otula \n\nMeeting ID : 879 4744 0851 \nPasscode : 18442022",
+        "lastname": "https://bit.ly/Newlife_Couples_1-10Years"
+
+	},{
+        "id": "1",
+        "firstname": "Married Couples 11-20Years",
+        "jobprofile": "Pr. Douglas Agoga \n\nMeeting ID : 848 0416 6301 \nPasscode : 18442022",
+        "lastname": "https://bit.ly/Couples_11-20Years"
+
+	},{
+        "id": "1",
+        "firstname": "Married Couples 21-30Years",
+        "jobprofile": "Pr. Ben Obwoge \n\nMeeting ID : 836 3028 7515 \nPasscode : 18442022",
+        "lastname": "https://bit.ly/Couples_21-30Years"
+
+	},{
+        "id": "1",
+        "firstname": "Married Couples Over 30 years",
+        "jobprofile": "Sis. Millicent Onyonyi \n\nMeeting ID : 858 2602 4990 \nPasscode : 18442022",
+        "lastname": "https://bit.ly/Couples_Over30Years"
 
 	}
 ]
