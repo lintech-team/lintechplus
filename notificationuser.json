@@ -1,63 +1,24 @@
 [
         {
-        "id": "10",
-        "firstname": "AUDIO SERMONS.",
-        "jobprofile": "Happy Sabbath. Did you miss Today's Sermon? Worry not. You can Watch, Listen or Download it here. You can request for a sermon that you cannot find on this app by contacting us at newlifecommunicationdepartment@gmail.com.  God Bless You.",
-        "lastname": "21-MAR-2020"
-
-	},{
-        "id": "9",
-        "firstname": "AUDIO SERMONS.",
-        "jobprofile": "Did you miss a sermon? You may find it here. You can either listen to a sermon or download it and listen later. You may request a sermon you cannot find on this page by contacting newlifecommunicationdepartment@gmail.com.",
-        "lastname": "10-MAR-2020"
-
-	},{
-        "id": "8",
-        "firstname": "Music Sabbath.",
-        "jobprofile": "Newlife SDA Church invites you to our Music Sabbath on the 14th of  March 2020 at Newlife SDA Church 5th Ngong Avenue. Theme is REJOICE, HE IS KING.",
-        "lastname": "9-MAR-2020"
-
-	},{
-        "id": "7",
-        "firstname": "TMI 2020",
-        "jobprofile": "Hope Channel Kenya (HCK) 2020 Evangelistic Campaign from 21st-5th April 2020, Guest Speaker: Pastor Victor Banda. ",
-        "lastname": "9-MAR-2020"
-
-	},{
-        "id": "6",
-        "firstname": "UPDATE",
-        "jobprofile": "New Update available on google play store.",
-        "lastname": "9-MAR-2020"
-
-	},{
-        "id": "5",
-        "firstname": "Newlife Singspiration",
-        "jobprofile": "All are invited to our Singspiration this Friday 31-JAN-2020 from 5:30pm - 7:00pm EAT.",
-        "lastname": "30-JAN-2020"
-
-	},{
-        "id": "4",
-        "firstname": "Newlife Youth Choir",
-        "jobprofile": "Newlife Youth Choir Registration is on going. Deadline has been pushed to 10th February 2020. Registration fee is Ksh. 200/-. Come one Come all and experience the love of God through Worship",
-        "lastname": "29-JAN-2020"
-
-	},{
-        "id": "3",
-        "firstname": "UPDATE",
-        "jobprofile": "New Update available on google play store.",
-        "lastname": "28-JAN-2020"
+        "id": "1",
+        "sender": "Sarah@support.",
+        "message": "Happy Sabbath. Did you miss Today's Sermon? Worry not. You can Watch, Listen or Download it here. You can request for a sermon that you cannot find on this app by contacting us at newlifecommunicationdepartment@gmail.com.  God Bless You.",
+        "image": "https://media.gcflearnfree.org/content/55e076277dd48174331f526b_01_17_2014/TextMessages_Intro.png",
+        "date": "21-MAR-2020"
 
 	},{
         "id": "2",
-        "firstname": "UPDATE",
-        "jobprofile": "New Update available on google play store.",
-        "lastname": "05-JAN-2020"
+        "sender": "Sarah@support.",
+        "message": "Happy Sabbath. Did you miss Today's Sermon? Worry not. You can Watch, Listen or Download it here. You can request for a sermon that you cannot find on this app by contacting us at newlifecommunicationdepartment@gmail.com.  God Bless You.",
+        "image": "",
+        "date": "21-MAR-2020"
 
-	},{
-        "id": "1",
-        "firstname": "UPDATE",
-        "jobprofile": "New Update available on google play store.",
-        "lastname": "01-JAN-2020"
+	}{
+        "id": "3",
+        "sender": "Sarah@support.",
+        "message": "Happy Sabbath. Did you miss Today's Sermon? Worry not. You can Watch, Listen or Download it here. You can request for a sermon that you cannot find on this app by contacting us at newlifecommunicationdepartment@gmail.com.  God Bless You.",
+        "image": "https://media.gcflearnfree.org/content/55e076277dd48174331f526b_01_17_2014/TextMessages_Intro.png",
+        "date": "21-MAR-2020"
 
 	}
 ]
