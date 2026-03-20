@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tassia Central Church - Privacy Policy</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0b1f3a;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    header {
+        background: #1565c0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+
+    .banner {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .container {
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    h2 {
+        color: #42a5f5;
+        margin-top: 30px;
+    }
+
+    p {
+        color: #e3f2fd;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .card {
+        background: #102a54;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #1565c0;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    a {
+        color: #90caf9;
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 22px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Tassia Central Church</h1>
+    <p>Privacy Policy</p>
+</header>
+
+<!-- Banner Image -->
+<img src="Screenshot_2025-07-15-22-28-24-27_203aa59b02ce4979e436148d495c6d80.jpg" class="banner">
+
+<div class="container">
+
+    <div class="card">
+        <p><strong>Effective Date:</strong> January 1, 2026</p>
+
+        <p>
+            Tassia Central Church ("we", "our", or "us") operates the Tassia Central Church mobile application.
+            This Privacy Policy explains how we collect, use, and protect your information in compliance with
+            Google Play policies.
+        </p>
+    </div>
+
+    <h2>1. Information We Collect</h2>
+    <div class="card">
+        <ul>
+            <li><strong>Personal Information:</strong> Name, email address (if provided by user)</li>
+            <li><strong>Device Information:</strong> Device type, OS version, app usage data</li>
+            <li><strong>Usage Data:</strong> Pages visited, features used</li>
+            <li><strong>Audio Streaming Data:</strong> When listening to Radio Neema or sermons</li>
+        </ul>
+    </div>
+
+    <h2>2. How We Use Your Information</h2>
+    <div class="card">
+        <ul>
+            <li>Provide and improve app services</li>
+            <li>Stream church radio and sermons</li>
+            <li>Send updates or notifications (if enabled)</li>
+            <li>Respond to user inquiries</li>
+        </ul>
+    </div>
+
+    <!-- Second Image -->
+    <img src="Screenshot_2025-07-15-22-29-16-12_203aa59b02ce4979e436148d495c6d80.jpg" class="banner">
+
+    <h2>3. Data Sharing</h2>
+    <div class="card">
+        <p>We do NOT sell your personal data.</p>
+        <p>We may share data with:</p>
+        <ul>
+            <li>Service providers (e.g., hosting, analytics)</li>
+            <li>Legal authorities when required by law</li>
+        </ul>
+    </div>
+
+    <h2>4. Third-Party Services</h2>
+    <div class="card">
+        <p>
+            Our app may use third-party services such as streaming platforms or analytics tools.
+            These services may collect information in accordance with their own privacy policies.
+        </p>
+    </div>
+
+    <h2>5. Data Security</h2>
+    <div class="card">
+        <p>
+            We implement appropriate security measures to protect your information.
+            However, no method of transmission over the internet is 100% secure.
+        </p>
+    </div>
+
+    <h2>6. Children's Privacy</h2>
+    <div class="card">
+        <p>
+            Our app is not directed to children under 13. We do not knowingly collect personal
+            data from children.
+        </p>
+    </div>
+
+    <h2>7. Your Rights</h2>
+    <div class="card">
+        <ul>
+            <li>Access your data</li>
+            <li>Request deletion of your data</li>
+            <li>Opt-out of notifications</li>
+        </ul>
+    </div>
+
+    <h2>8. Changes to This Policy</h2>
+    <div class="card">
+        <p>
+            We may update this Privacy Policy from time to time. Updates will be posted on this page.
+        </p>
+    </div>
+
+    <!-- Third Image -->
+    <img src="Screenshot_2025-07-15-22-34-09-71_203aa59b02ce4979e436148d495c6d80.jpg" class="banner">
+
+    <h2>9. Contact Us</h2>
+    <div class="card">
+        <p>
+            If you have any questions, contact us at:
+        </p>
+        <p>Email: tassiacentralchurch@gmail.com</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Tassia Central Church. All rights reserved.
+</footer>
+
+</body>
+</html>
